@@ -9,185 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-  body {
-    font: 400 15px Lato, sans-serif;
-    line-height: 1.8;
-    color: #818181;
-}
-h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-  .jumbotron {
-      background-color: #f4511e;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-}
-  .thumbnail img {
-    width: 70%;
-    height: 70%;
-    margin-bottom: 10px;
-}
-.carousel-control.right, .carousel-control.left {
-   background-image: none;
-   color: #f4511e;
-}
-.carousel-indicators li {
-    border-color: #f4511e;
-}
-.carousel-indicators li.active {
-    background-color: #f4511e;
-}
-.item h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-}
-.item span {
-    font-style: normal;
-}
-.panel {
-    border: 1px solid #f4511e;
-    border-radius:0 !important;
-    transition: box-shadow 0.5s;
-}
-.panel:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-}
-.panel-footer .btn:hover {
-    border: 1px solid #f4511e;
-    background-color: #fff !important;
-    color: #f4511e;
-}
-.panel-heading {
-    color: #fff !important;
-    background-color: #f4511e !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-.panel-footer {
-    background-color: white !important;
-}
-.panel-footer h3 {
-    font-size: 32px;
-}
-.panel-footer h4 {
-    color: #aaa;
-    font-size: 14px;
-}
-.panel-footer .btn {
-    margin: 15px 0;
-    background-color: #f4511e;
-    color: #fff;
-}
-.navbar {
-    margin-bottom: 0;
-    background-color: #f4511e;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
-}
-.navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
-}
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
-}
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-}
-footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #f4511e;
-}
-.slideanim {visibility:hidden;}
-.slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-}
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-@-webkit-keyframes slide {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
-  }
-}
-@media screen and (max-width: 768px) {
-  .col-sm-4 {
-    text-align: center;
-    margin: 25px 0;
-  }
-  .btn-lg {
-      width: 100%;
-      margin-bottom: 35px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .logo {
-      font-size: 150px;
-  }
-}
+
 </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 
+<!-- Navbar页面顶 -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -211,6 +39,7 @@ footer .glyphicon {
 </nav>
 
 
+<!-- 大图文字 -->
 <div class="jumbotron text-center">
   <h1>1 次投递，让海量好机会来找你</h1>
   <p>年薪 20W 起，每周精选 300+A 轮以上最具前景互联网行业</p>
@@ -225,8 +54,8 @@ footer .glyphicon {
 </div>
 
 
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<!-- 运作流程*拍卖 -->
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm-7" align=center>
       <h2>申请并等待审核</h2>
@@ -238,7 +67,7 @@ footer .glyphicon {
   </div>
 </div>
 
-<div id="services" class="container-fluid bg-grey">
+<div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-7" align=center>
       <img src="http://ww3.sinaimg.cn/large/006tKfTcgy1fex1a2czj0j307304qdgb.jpg" width="320" height="210">
@@ -250,7 +79,7 @@ footer .glyphicon {
   </div>
 </div>
 
-<div id="about" class="container-fluid">
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm-7" align=center>
       <h2>收到邀请</h2>
@@ -262,7 +91,7 @@ footer .glyphicon {
   </div>
 </div>
 
-<div id="services" class="container-fluid bg-grey">
+<div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-7" align=center>
       <img src="http://ww2.sinaimg.cn/large/006tKfTcgy1fex1jmsx33j307904tmxg.jpg" width="340" height="200">
@@ -275,8 +104,8 @@ footer .glyphicon {
 </div>
 
 
-<!-- Container (Services Section) -->
-<div id="portfolio" class="container-fluid text-center">
+<!-- 使用我们网站的好处 -->
+<div class="container-fluid text-center">
   <h2>1 offer 这样帮你发现极致职业机会</h2>
   <br>
   <div class="row slideanim">
@@ -316,8 +145,9 @@ footer .glyphicon {
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
-<div id="pricing" class="container-fluid text-center bg-grey">
+
+<!-- 用户故事*照片 -->
+<div class="container-fluid text-center bg-grey">
   <h2>遇见更好的机会，体验更精彩的人生</h2>
   <h4>看看他们的故事</h4>
   <div class="row text-center">
@@ -345,16 +175,14 @@ footer .glyphicon {
   </div>
 </div>
 
-
+<!-- 用户故事*指示器，向左/向右显示用户说法 -->
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-  <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
-
-  <!-- Wrapper for slides -->
+  <!-- 用户故事*一人一句话 -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <h4>李申说：“在 <strong>1 offer</strong> 一周内收到 17 个面试邀请，大多来自淘宝、京东等一流电商公司。<br/>选择其中的 4 个接受了邀请，最终拿到了 2 个 offer。”</h4>
@@ -366,9 +194,7 @@ footer .glyphicon {
       <h4>林永说：“拍卖第二天，就在 <strong>1 offer</strong> 上收到 7 个面试邀请，<br/>我比较在乎公司的文化和管理水平，所以只接受了华为的offer。”</h4>
     </div>
   </div>
-
-
-  <!-- Left and right controls -->
+  <!-- 用户故事*控制器，向右或向右箭头 -->
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -378,10 +204,11 @@ footer .glyphicon {
     <span class="sr-only">Next</span>
   </a>
 </div>
-</div>
 
 
-<!-- Container (Pricing Section) -->
+
+
+<!-- 服务类型*定价容器 -->
 <div class="container-fluid">
   <div class="text-center">
     <h2>特色服务</h2>
@@ -449,8 +276,8 @@ footer .glyphicon {
 </div>
 
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<!-- 联系方式 -->
+<div class="container-fluid bg-grey">
   <h2 class="text-center">联系我们</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -479,7 +306,7 @@ footer .glyphicon {
 </div>
 
 
-
+<!-- Footer箭头 -->
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
@@ -488,7 +315,9 @@ footer .glyphicon {
 </footer>
 
 
+<!-- JS动画脚本 -->
 <script>
+//效果一、平滑滚动，当点击导航栏中的链接时。
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
@@ -512,6 +341,7 @@ $(document).ready(function(){
     } // End if
   });
 
+//效果二、向上滚动元素的效果，只需添加.slideanmin，可在js和css中修改持续时间、透明度、何时开始等）
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
