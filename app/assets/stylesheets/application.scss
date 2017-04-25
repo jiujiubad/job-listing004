@@ -19,6 +19,17 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
+//按钮样式
+.btn-lg {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+//背景、字体、个性化主题
+.bg-grey {
+    background-color: #f6f6f6;
+}
 body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
@@ -41,23 +52,6 @@ h4 {
   margin-bottom: 30px;
 }
 
-.btn-lg {
-    width: 100%;
-    margin-bottom: 35px;
-}
-
-
-@media screen and (max-width: 480px) {
-.logo {
-    font-size: 150px;
-}
-}
-
-.bg-grey {
-    background-color: #f6f6f6;
-}
-
-
 //大图位置的样式
 .jumbotron {
     background-color: #f4511e;
@@ -71,10 +65,19 @@ h4 {
 
 //拍卖流程*将“logo”列放置在小于768像素宽的屏幕上
 @media screen and (max-width: 768px) {
-.col-sm-4 {
-  text-align: center;
-  margin: 25px 0;
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+  .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+  }
 }
+@media screen and (max-width: 480px) {
+  .logo {
+      font-size: 150px;
+  }
 }
 
 //使用网站的好处*icon风格
