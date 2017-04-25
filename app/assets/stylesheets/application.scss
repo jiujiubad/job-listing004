@@ -52,17 +52,6 @@ h4 {
   margin-bottom: 30px;
 }
 
-//大图位置的样式
-.jumbotron {
-    background-color: #f4511e;
-    color: #fff;
-    padding: 100px 25px;
-    font-family: Montserrat, sans-serif;//“蒙特塞拉特”和“拉托”
-}
-.container-fluid {
-    padding: 60px 50px;
-}
-
 //拍卖流程*将“logo”列放置在小于768像素宽的屏幕上
 @media screen and (max-width: 768px) {
   .col-sm-4 {
@@ -163,30 +152,6 @@ h4 {
   margin: 15px 0;
   background-color: #f4511e;
   color: #fff;
-}
-
-//Navbar导航栏
-.navbar {
-  margin-bottom: 0;
-  background-color: #f4511e;
-  z-index: 9999;
-  border: 0;
-  font-size: 12px !important;
-  line-height: 1.42857143 !important;
-  letter-spacing: 4px;
-  border-radius: 0;
-  font-family: Montserrat, sans-serif;//“蒙特塞拉特”和“拉托”
-}
-.navbar li a, .navbar .navbar-brand {
-  color: #fff !important;
-}
-.navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #f4511e !important;
-  background-color: #fff !important;
-}
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-  color: #fff !important;
 }
 
 //footer箭头样式
