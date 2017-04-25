@@ -19,6 +19,56 @@
 @import "bootstrap";
 @import "font-awesome";
 
+//navbar导航栏
+.navbar-default {
+     background-color: #f4511e;
+     border-color: #f4511e;
+     margin-bottom: 0;
+     border-radius: 0;
+ }
+ .navbar-default .navbar-brand {
+     color: #ffffff;
+     padding: 10px 15px;
+     line-height: 30px;
+ }
+ .navbar-default .navbar-brand:hover,
+ .navbar-default .navbar-brand:focus {
+     color: #FF6F00;
+     background-color: transparent;
+ }
+ .navbar-default .navbar-nav > li > a {
+     color: #ffffff;
+ }
+ .navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus {
+     color: #FF6F00;
+     background-color: transparent;
+ }
+ .navbar-default .navbar-nav > .active > a,
+ .navbar-default .navbar-nav > .active > a:hover,
+ .navbar-default .navbar-nav > .active > a:focus {
+     color: #FF6F00;
+     background-color: #FFE0B2;
+ }
+ .navbar-default .navbar-nav > .open > a,
+ .navbar-default .navbar-nav > .open > a:focus,
+ .navbar-default .navbar-nav > .open > a:hover {
+     background-color: #ffffff;
+     color: #f4511e;
+ }
+
+//大图
+.jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 220px 25px;
+    font-family: Montserrat, sans-serif;//“蒙特塞拉特”和“拉托”
+}
+
+//所有版块上下、左右撑开位置
+.container-fluid1 {
+    padding: 60px 50px;
+}
 
 //按钮样式
 .btn-lg {
