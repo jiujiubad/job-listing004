@@ -19,6 +19,7 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
 //navbar导航栏
 .navbar-default {
      background-color: #f4511e;
@@ -33,7 +34,7 @@
  }
  .navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-     color: #FF6F00;
+     color: #f4511e;
      background-color: transparent;
  }
  .navbar-default .navbar-nav > li > a {
@@ -41,14 +42,14 @@
  }
  .navbar-default .navbar-nav > li > a:hover,
  .navbar-default .navbar-nav > li > a:focus {
-     color: #FF6F00;
+     color: #f4511e;
      background-color: transparent;
  }
  .navbar-default .navbar-nav > .active > a,
  .navbar-default .navbar-nav > .active > a:hover,
  .navbar-default .navbar-nav > .active > a:focus {
-     color: #FF6F00;
-     background-color: #FFE0B2;
+     color: #f4511e;
+     background-color: #f4511e;
  }
  .navbar-default .navbar-nav > .open > a,
  .navbar-default .navbar-nav > .open > a:focus,
@@ -63,6 +64,9 @@
     color: #fff;
     padding: 220px 25px;
     font-family: Montserrat, sans-serif;//“蒙特塞拉特”和“拉托”
+}
+.container-fluid .jumbotron{
+border-radius: 0;//圆角为0
 }
 
 //所有版块上下、左右撑开位置
