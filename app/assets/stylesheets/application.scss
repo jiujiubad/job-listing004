@@ -20,7 +20,7 @@
 @import "font-awesome";
 
 
-//navbar导航栏
+//================navbar导航栏
 .navbar-default {
      background-color: #f4511e;
      border-color: #f4511e;
@@ -57,8 +57,20 @@
      background-color: #ffffff;
      color: #f4511e;
  }
+ /*navbar置顶*/
+ .navbar-fixed-top {
+    top: 0px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
 
-//大图
+
+//================大图
 .jumbotron {
     background-color: #f4511e;
     color: #fff;
@@ -69,18 +81,18 @@
 border-radius: 0;//圆角为0
 }
 
-//所有版块上下、左右撑开位置
+//================所有版块上下、左右撑开位置
 .container-fluid1 {
     padding: 60px 50px;
 }
 
-//按钮样式
+//================按钮样式
 .btn-lg {
     width: 100%;
     margin-bottom: 35px;
 }
 
-//背景、字体、个性化主题
+//================背景、字体、个性化主题
 .bg-grey {
     background-color: #f6f6f6;
 }
@@ -106,7 +118,7 @@ h4 {
   margin-bottom: 30px;
 }
 
-//拍卖流程*将“logo”列放置在小于768像素宽的屏幕上
+//================拍卖流程*将“logo”列放置在小于768像素宽的屏幕上
 @media screen and (max-width: 768px) {
   .col-sm-4 {
     text-align: center;
@@ -123,7 +135,7 @@ h4 {
   }
 }
 
-//使用网站的好处*icon风格
+//================使用网站的好处*icon风格
 .logo-small {
     color: #f4511e;
     font-size: 50px;
@@ -133,7 +145,7 @@ h4 {
     font-size: 200px;
 }
 
-//用户故事*照片缩略图
+//================用户故事*照片缩略图
 .thumbnail {
   padding: 0 0 15px 0;
   border: none;
@@ -146,7 +158,7 @@ h4 {
 }
 
 
-//用户故事*轮播一人一句话
+//================用户故事*轮播一人一句话
 .carousel-control.right, .carousel-control.left {
  background-image: none;
  color: #f4511e;
@@ -168,7 +180,7 @@ h4 {
   font-style: normal;
 }
 
-//服务类型*定价容器的造型
+//================服务类型*定价容器的造型
 .panel {
   border: 1px solid #f4511e;
   border-radius:0 !important;
@@ -208,14 +220,14 @@ h4 {
   color: #fff;
 }
 
-//footer箭头样式
+//================footer箭头样式
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
   color: #f4511e;
 }
 
-// 向上滚动元素的效果，只需添加.slideanmin，可在js和css中修改持续时间、透明度、何时开始等）
+//================向上滚动元素的效果，只需添加.slideanmin，可在js和css中修改持续时间、透明度、何时开始等）
 .slideanim {visibility:hidden;}
 .slide {
   animation-name: slide;
@@ -245,7 +257,7 @@ footer .glyphicon {
 }
 }
 
-//搜索框的设置（参考戴建林https://github.com/daijianlin/job-listing/blob/Step9.0-css09/app/assets/stylesheets/application.scss）
+//================搜索框的设置（参考戴建林https://github.com/daijianlin/job-listing/blob/Step9.0-css09/app/assets/stylesheets/application.scss）
 #search-id {
   width: 200px;
   padding-top: 7px;
@@ -272,12 +284,11 @@ footer .glyphicon {
 
 
 //================footer===============
-
 .footer-distributed{
 	background-color: #323436;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
-	width: 103%;
+	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
@@ -286,7 +297,6 @@ footer .glyphicon {
   z-index: auto;
 
 }
-
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
 .footer-distributed .footer-right{
@@ -295,38 +305,32 @@ footer .glyphicon {
 }
 
 /* Footer left */
-
 .footer-distributed .footer-left{
 	width: 40%;
 }
 
 /* The company logo */
-
 .footer-distributed h3{
 	color:  #ffffff;
 	font: normal 36px 'Cookie', cursive;
 	margin: 0;
 }
-
 .footer-distributed h3 span{
 	color:  #31BAFD;
 }
 
 /* Footer links */
-
 .footer-distributed .footer-links{
 	color:  #ffffff;
 	margin: 20px 0 12px;
 	padding: 0;
 }
-
 .footer-distributed .footer-links a{
 	display:inline-block;
 	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
 }
-
 .footer-distributed .footer-company-name{
 	color:  #8f9296;
 	font-size: 14px;
@@ -335,11 +339,9 @@ footer .glyphicon {
 }
 
 /* Footer Center */
-
 .footer-distributed .footer-center{
 	width: 35%;
 }
-
 .footer-distributed .footer-center i{
 	background-color:  #33383b;
 	color: #ffffff;
@@ -352,38 +354,31 @@ footer .glyphicon {
 	margin: 10px 15px;
 	vertical-align: middle;
 }
-
 .footer-distributed .footer-center i.fa-envelope{
 	font-size: 17px;
 	line-height: 38px;
 }
-
 .footer-distributed .footer-center p{
 	display: inline-block;
 	color: #ffffff;
 	vertical-align: middle;
 	margin:0;
 }
-
 .footer-distributed .footer-center p span{
 	display:block;
 	font-weight: normal;
 	font-size:14px;
 	line-height:2;
 }
-
 .footer-distributed .footer-center p a{
 	color:  #31BAFD;
 	text-decoration: none;;
 }
 
-
 /* Footer Right */
-
 .footer-distributed .footer-right{
 	width: 20%;
 }
-
 .footer-distributed .footer-company-about{
 	line-height: 20px;
 	color:  #92999f;
@@ -391,7 +386,6 @@ footer .glyphicon {
 	font-weight: normal;
 	margin: 0;
 }
-
 .footer-distributed .footer-company-about span{
 	display: block;
 	color:  #ffffff;
@@ -399,11 +393,9 @@ footer .glyphicon {
 	font-weight: bold;
 	margin-bottom: 20px;
 }
-
 .footer-distributed .footer-icons{
 	margin-top: 25px;
 }
-
 .footer-distributed .footer-icons a{
 	display: inline-block;
 	width: 35px;
@@ -411,19 +403,15 @@ footer .glyphicon {
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 2px;
-
 	font-size: 20px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
 
-
-
-// ===========hot-jobs-category
+//================热门职位
 .hjc-ul {
   padding: 0 20px 0;
   margin: 50px auto 0;
@@ -475,7 +463,8 @@ footer .glyphicon {
   }
 }
 
-//=========== home-people
+
+//================用户故事
 .home-people {
   .person {
     display: inline-block;
