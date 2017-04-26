@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_action :validate_search_key, only: [:search]
-  
+
   def index
     @jobs = case params[:order]
     when 'by_lower_bound'
