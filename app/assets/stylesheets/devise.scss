@@ -101,7 +101,7 @@ $btn-background-hover: #00DBE9;
     .forget-password {
       position: relative;
       display: block;
-      margin-top: -34px;
+      margin-top: -42px;
       margin-right: 0;
       margin-bottom: 20px;
       float: right;
@@ -190,4 +190,8 @@ $btn-background-hover: #00DBE9;
   top: 0;
   left: 0;
   z-index: 2;
+}
+
+.login-wrap {
+  height: 750px;
 }
