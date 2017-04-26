@@ -268,3 +268,348 @@ footer .glyphicon {
   padding: 15px;
   font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
 }
+
+
+
+//================footer===============
+
+.footer-distributed{
+	background-color: #323436;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 103%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+	margin-top: 0px;
+  margin-left: -20px;
+  z-index: auto;
+
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #31BAFD;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #31BAFD;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+
+// ===========hot-jobs-category
+.hjc-ul {
+  padding: 0 20px 0;
+  margin: 50px auto 0;
+  text-align: center;
+  overflow: hidden;
+  height: 355px;
+  width: 1024px;
+  li {
+    display: inline-block;
+    width: 220px;
+    height: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    margin-bottom: 50px;
+    overflow: hidden;
+    .hjc-img-wrap {
+      width: 220px;
+      height: 150px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &:hover {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -webkit-transition: all .8s;
+        transition: all .8s;
+      }
+    }
+    .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,.7);
+      font-size: 16px;
+      padding: 6px 25px;
+      color: #fff;
+      transition: opacity .4s ease-in-out;
+    }
+  }
+  .more {
+    .title {
+      height: 150px;
+      line-height: 130px;
+      font-size: 20px;
+    }
+  }
+}
+
+//=========== home-people
+.home-people {
+  .person {
+    display: inline-block;
+    margin-top: 20px;
+    top: 0;
+    position: relative;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    &:hover {
+      position: relative;
+      top: -5px;
+    }
+    .avata-wrapper {
+      position: absolute;
+      width: 96px;
+      height: 96px;
+      padding: 5px;
+      left: 50%;
+      top: 10px;
+      margin-left: -53px;
+      border: dotted 1px #E6EDEF;
+      border-radius: 53px;
+      overflow: hidden;
+    }
+    .avata {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    .intro {
+      margin-top: 108px;
+      .name {
+        text-align: center;
+      }
+      .invest {
+        float: right;
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 28px;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+    .words {
+      position: relative;
+      margin-top: 10px;
+      padding: 41px 20px 20px 25px;
+      border-radius: 3px;
+      color: #fff;
+      line-height: 25px;
+      text-align: left;
+      font-weight: bold;
+      overflow: hidden;
+      .bg {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        opacity: 0.7;
+        z-index: 0;
+      }
+      .quote {
+        position: absolute;
+        color: #aaa;
+        font-size: 16px;
+      }
+      .quote-l {
+        top: 10px;
+        left: 5px;
+      }
+      .quote-r {
+        bottom: 10px;
+        right: 5px;
+      }
+      .content {
+        position: relative;
+        height: 75px;
+        overflow: hidden;
+        font-size: 13px;
+        z-index: 0;
+        color: #333;
+      }
+    }
+  }
+}
+
+.section-content {
+  width: 1000px;
+  padding-top: 60px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8em;
+  .title {
+    padding: 20px 0 10px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .description {
+    width: 420px;
+    margin: 0 auto;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+  .col-3 {
+    padding-top: 20px;
+    .item {
+      width: 300px;
+      margin-left: 33px;
+      position: relative;
+      top: 0;
+      -webkit-transition: all .4s;
+      transition: all .4s;
+      &:hover {
+        position: relative;
+        top: -5px;
+      }
+      .advantage-img {
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .advantage-title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #333333;
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+      }
+    }
+  }
+}
