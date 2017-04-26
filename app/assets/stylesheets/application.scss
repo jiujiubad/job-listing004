@@ -20,11 +20,10 @@
 @import "font-awesome";
 
 
-//================navbar导航栏
+//================navbar导航栏margin-bottom
 .navbar-default {
      background-color: #f4511e;
      border-color: #f4511e;
-     margin-bottom: 0;
      border-radius: 0;
  }
  .navbar-default .navbar-brand {
@@ -74,25 +73,27 @@
 .jumbotron {
     background-color: #f4511e;
     color: #fff;
-    padding: 220px 25px;
+    padding: 230px 25px;
     font-family: Montserrat, sans-serif;//“蒙特塞拉特”和“拉托”
+    margin-top: -50px;
 }
 .container-fluid .jumbotron{
 border-radius: 0;//圆角为0
 }
 
-//================所有版块上下、左右撑开位置
+//================常用COMMAN====================
+//-----------所有版块上下、左右撑开位置
 .container-fluid1 {
     padding: 60px 50px;
 }
 
-//================按钮样式
+//-----------按钮样式
 .btn-lg {
     width: 100%;
     margin-bottom: 35px;
 }
 
-//================背景、字体、个性化主题
+//-----------背景、字体、个性化主题
 .bg-grey {
     background-color: #f6f6f6;
 }
@@ -100,6 +101,7 @@ body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
   color: #818181;
+  margin-top: 50px;
 }
 
 h2 {
@@ -117,6 +119,12 @@ h4 {
   font-weight: 400;
   margin-bottom: 30px;
 }
+//-----------job表格样式
+.col-centered{  //Nic教程用的，panel居中
+  float: none;
+  margin: 0 auto;
+}
+
 
 //================拍卖流程*将“logo”列放置在小于768像素宽的屏幕上
 @media screen and (max-width: 768px) {
