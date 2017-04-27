@@ -101,8 +101,13 @@ body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
   color: #818181;
-  margin-top: 50px;
+  margin-top: 50px;//表格与Navbar留白
+  margin-bottom: 310px;//footer置底用（配合footer上的css）
 }
+html {//footer置底用
+   position: relative;
+   min-height: 100%;
+ }
 
 h2 {
   font-size: 24px;
@@ -303,7 +308,8 @@ footer .glyphicon {
 	margin-top: 0px;
   margin-left: 0px;
   z-index: auto;
-
+  position: absolute;//footer置底（配合body、html的css）
+  bottom: 0;//footer置底
 }
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,

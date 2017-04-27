@@ -2,12 +2,12 @@
   <br>
 <% if @query_string.blank? %>
     <div class="search-info-title">
-      Sorry, The search content cannot be blank, please type some product into to search.
+      搜索信息不能为空，请输入关键字搜索。
     </div>
 
   <% elsif @jobs.blank? %>
     <br>
-    <h2 class="search-info-title">搜索信息不能为空，请输入关键字搜索</h2>
+    <h2 class="search-info-title">没有符合搜索条件的资料。</h2>
   <% else %>
     <h2 class="search-info-title"> 有关"<%= @query_string %>"的工作信息 </h2>
     <div class="search-result">
