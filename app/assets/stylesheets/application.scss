@@ -33,7 +33,7 @@
  }
  .navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-     color: #f4511e;
+     color: #ffffff;//鼠标放在公司名 Last offer上的颜色
      background-color: transparent;
  }
  .navbar-default .navbar-nav > li > a {
@@ -41,7 +41,7 @@
  }
  .navbar-default .navbar-nav > li > a:hover,
  .navbar-default .navbar-nav > li > a:focus {
-     color: #f4511e;
+     color: #ffffff;//鼠标放在 首页、工作列表、用户名上的颜色
      background-color: transparent;
  }
  .navbar-default .navbar-nav > .active > a,
@@ -190,7 +190,7 @@ h4 {
 
 //================服务类型*定价容器的造型
 .panel {
-  border: 0px solid #f4511e;
+  border: 1px solid #f4511e;
   border-radius:0 !important;
   transition: box-shadow 0.5s;
 }

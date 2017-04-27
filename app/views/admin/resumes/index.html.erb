@@ -1,4 +1,13 @@
-<h2> <%= @job.title %> - 履历列表 </h2>
-
-<hr>
-<%= render :partial => "resume", :collection => @resumes, :as => :resume %>
+<hr width=0>
+<div class="col-md-10 col-centered">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 style="color:#ffffff">
+        <%= @job.title %> 收到的简历
+      </h2>
+    </div>
+    <div class="panel-body">
+      <%= render :partial => "resume", :collection => @resumes, :as => :resume %>
+    </div>
+  </div>
+</div>
