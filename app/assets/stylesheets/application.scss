@@ -20,43 +20,10 @@
 @import "font-awesome";
 
 
-.hring {//直线
-width: 60px;
-background-color: #2cc795;
-height: 2px;
-margin-top: 30px;
-}
-p.font1 {
-  font-family: "Microsoft YaHei";
-  font-weight: 400;
-  font-size: 16px;
-  color: #333333;
-}
-p.font2 {
-  font-family: "Microsoft YaHei";
-  font-size: 15px;
-  color: #adadad;
-  margin-top: 30px;
-}
-p.font3 {
-  font-family: "Microsoft YaHei";
-  font-weight: 350;
-  font-size: 5px;
-  color: #1e3f52;
-}
-p.font4 {
-  font-family: "Microsoft YaHei";
-  font-size: 5px;
-  color: #2cc795;
-}
-.fontlocation1 {
-  margin-left: 35px;
-  margin-top: 35px;
-  text-align: left;
-}
 
 
-//================常用COMMAN====================
+
+//================常用素材====================
 /*-----------所有版块上下、左右撑开位置*/
 .container-fluid1 {
     padding: 60px 50px;
@@ -158,6 +125,23 @@ html {//footer置底用
   height: 100%;
   margin-top: -50px;
 }
+.button-1 {//按钮的位置、大小
+  margin-top: 10px;
+  width: 250px;
+  height: 50px;
+  background-color: #2cc795;
+  position: absolute;
+  z-index: 10;
+}
+.button-position {
+  position: absolute;
+  top: 480px;
+  left: 270px;
+}
+.imgw{
+  position: relative;
+}
+
 // .jumbotron {
 //     background-color: #1e3f52;
 //     color: #fff;
@@ -226,6 +210,7 @@ html {//footer置底用
 //================使用网站的好处*icon风格
 .container-fluid2 {
     padding: 170px 0px 70px 0px;//调整上下左右内边距
+    margin-right: 20px;
 }
 .logo-small {
     color: #2cc795;
@@ -260,6 +245,7 @@ html {//footer置底用
 //================用户故事*照片缩略图
 .container-fluid3 {
     padding: 60px 50px;
+    margin-bottom: 300px;//到footer的距离
 }
 .thumbnail {
   padding: 0 0 15px 0;
@@ -272,107 +258,147 @@ html {//footer置底用
   height: 84%;
   margin-bottom: 10px;
 }
+.hr-1 {//直线
+width: 60px;
+background-color: #2cc795;
+height: 2px;
+margin-top: 30px;
+}
+p.font-1 {
+  font-family: "Microsoft YaHei";
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+}
+p.font-2 {
+  font-family: "Microsoft YaHei";
+  font-size: 15px;
+  color: #adadad;
+  margin-top: 30px;
+}
+p.font-3 {
+  font-family: "Microsoft YaHei";
+  font-weight: 350;
+  font-size: 5px;
+  color: #adadad;
+}
+p.font-4 {
+  font-family: "Microsoft YaHei";
+  font-size: 5px;
+  color: #2cc795;
+}
+.font-position1 {
+  margin-left: 35px;
+  margin-top: 35px;
+  text-align: left;
+}
+.button-3 {//按钮的位置、大小
+  margin-top: 10px;
+  width: 160px;
+  height: 50px;
+  background-color: #2cc795;
+}
 /*关于字体的定义见 Common*/
 
 
-//================用户故事*轮播一人一句话
-.carousel-control.right, .carousel-control.left {
- background-image: none;
- color: #1e3f52;
-}
-.carousel-indicators li {
-  border-color: #1e3f52;
-}
-.carousel-indicators li.active {
-  background-color: #1e3f52;
-}
-.item h4 {
-  font-size: 19px;
-  line-height: 1.375em;
-  font-weight: 400;
-  font-style: italic;
-  margin: 70px 0;
-}
-.item span {
-  font-style: normal;
-}
+// //================用户故事*轮播一人一句话
+// .carousel-control.right, .carousel-control.left {
+//  background-image: none;
+//  color: #1e3f52;
+// }
+// .carousel-indicators li {
+//   border-color: #1e3f52;
+// }
+// .carousel-indicators li.active {
+//   background-color: #1e3f52;
+// }
+// .item h4 {
+//   font-size: 19px;
+//   line-height: 1.375em;
+//   font-weight: 400;
+//   font-style: italic;
+//   margin: 70px 0;
+// }
+// .item span {
+//   font-style: normal;
+// }
 
-//================服务类型*定价容器的造型
-.panel {
-  border: 1px solid #1e3f52;
-  border-radius:0 !important;
-  transition: box-shadow 0.5s;
-}
-.panel:hover {
-  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-}
-.panel-footer .btn:hover {
-  border: 1px solid #1e3f52;
-  background-color: #fff !important;
-  color: #1e3f52;
-}
-.panel-heading {
-  color: #fff !important;
-  background-color: #1e3f52 !important;
-  padding: 25px;
-  border-bottom: 1px solid transparent;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-.panel-footer {
-  background-color: white !important;
-}
-.panel-footer h3 {
-  font-size: 32px;
-}
-.panel-footer h4 {
-  color: #aaa;
-  font-size: 14px;
-}
-.panel-footer .btn {
-  margin: 15px 0;
-  background-color: #1e3f52;
-  color: #fff;
-}
+// //================服务类型*定价容器的造型
+// .panel {
+//   border: 1px solid #1e3f52;
+//   border-radius:0 !important;
+//   transition: box-shadow 0.5s;
+// }
+// .panel:hover {
+//   box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+// }
+// .panel-footer .btn:hover {
+//   border: 1px solid #1e3f52;
+//   background-color: #fff !important;
+//   color: #1e3f52;
+// }
+// .panel-heading {
+//   color: #fff !important;
+//   background-color: #1e3f52 !important;
+//   padding: 25px;
+//   border-bottom: 1px solid transparent;
+//   border-top-left-radius: 0px;
+//   border-top-right-radius: 0px;
+//   border-bottom-left-radius: 0px;
+//   border-bottom-right-radius: 0px;
+// }
+// .panel-footer {
+//   background-color: white !important;
+// }
+// .panel-footer h3 {
+//   font-size: 32px;
+// }
+// .panel-footer h4 {
+//   color: #aaa;
+//   font-size: 14px;
+// }
+// .panel-footer .btn {
+//   margin: 15px 0;
+//   background-color: #1e3f52;
+//   color: #fff;
+// }
+//
+// //================footer箭头样式
+// footer .glyphicon {
+//   font-size: 20px;
+//   margin-bottom: 20px;
+//   color: #1e3f52;
+// }
 
-//================footer箭头样式
-footer .glyphicon {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #1e3f52;
-}
-
-//================向上滚动元素的效果，只需添加.slideanmin，可在js和css中修改持续时间、透明度、何时开始等）
-.slideanim {visibility:hidden;}
-.slide {
-  animation-name: slide;
-  -webkit-animation-name: slide;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-  visibility: visible;
-}
-@keyframes slide {
-0% {
-  opacity: 0;
-  transform: translateY(70%);
-}
-100% {
-  opacity: 1;
-  transform: translateY(0%);
-}
-}
-@-webkit-keyframes slide {
-0% {
-  opacity: 0;
-  -webkit-transform: translateY(70%);
-}
-100% {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-}
-}
+// //================向上滚动元素的效果，只需添加.slideanmin，可在js和css中修改持续时间、透明度、何时开始等）
+// .slideanim {visibility:hidden;}
+// .slide {
+//   animation-name: slide;
+//   -webkit-animation-name: slide;
+//   animation-duration: 1s;
+//   -webkit-animation-duration: 1s;
+//   visibility: visible;
+// }
+// @keyframes slide {
+// 0% {
+//   opacity: 0;
+//   transform: translateY(70%);
+// }
+// 100% {
+//   opacity: 1;
+//   transform: translateY(0%);
+// }
+// }
+// @-webkit-keyframes slide {
+// 0% {
+//   opacity: 0;
+//   -webkit-transform: translateY(70%);
+// }
+// 100% {
+//   opacity: 1;
+//   -webkit-transform: translateY(0%);
+// }
+// }
 
 //================搜索框的设置（参考戴建林https://github.com/daijianlin/job-listing/blob/Step9.0-css09/app/assets/stylesheets/application.scss）
 #search-id {
@@ -408,7 +434,7 @@ footer .glyphicon {
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 50px;
+	padding: 180px 50px;
 	margin-top: 0px;
   margin-left: 0px;
   z-index: auto;
