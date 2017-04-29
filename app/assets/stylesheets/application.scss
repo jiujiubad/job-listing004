@@ -19,6 +19,43 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
+.hring {//直线
+width: 60px;
+background-color: #2cc795;
+height: 2px;
+margin-top: 30px;
+}
+p.font1 {
+  font-family: "Microsoft YaHei";
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+}
+p.font2 {
+  font-family: "Microsoft YaHei";
+  font-size: 15px;
+  color: #adadad;
+  margin-top: 30px;
+}
+p.font3 {
+  font-family: "Microsoft YaHei";
+  font-weight: 350;
+  font-size: 5px;
+  color: #1e3f52;
+}
+p.font4 {
+  font-family: "Microsoft YaHei";
+  font-size: 5px;
+  color: #2cc795;
+}
+.fontlocation1 {
+  margin-left: 35px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+
 //================常用COMMAN====================
 /*-----------所有版块上下、左右撑开位置*/
 .container-fluid1 {
@@ -44,25 +81,26 @@ html {//footer置底用
    position: relative;
    min-height: 100%;
  }
-h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #303030;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-h4 {
-  font-size: 19px;
-  line-height: 1.375em;
-  color: #303030;
-  font-weight: 400;
-  margin-bottom: 30px;
-}
-/*-----------job表格样式*/
+// h2 {
+//   font-size: 24px;
+//   text-transform: uppercase;
+//   color: #303030;
+//   font-weight: 600;
+//   margin-bottom: 30px;
+// }
+// h4 {
+//   font-size: 19px;
+//   line-height: 1.375em;
+//   color: #303030;
+//   font-weight: 400;
+//   margin-bottom: 30px;
+// }
+/*-----------job界面表格样式*/
 .col-centered{  //Nic教程用的，panel居中
   float: none;
   margin: 0 auto;
 }
+
 
 
 //================navbar导航栏margin-bottom
@@ -185,6 +223,20 @@ h4 {
 }
 
 
+//================使用网站的好处*icon风格
+.container-fluid2 {
+    padding: 170px 0px 70px 0px;//调整上下左右内边距
+}
+.logo-small {
+    color: #2cc795;
+    font-size: 100px!important;
+    margin-top: 50px;
+}
+.logo {
+    color: #1e3f52;
+    font-size: 200px;
+}
+
 
 //================拍卖流程*将“logo”列放置在小于768像素宽的屏幕上
 @media screen and (max-width: 768px) {
@@ -203,27 +255,24 @@ h4 {
   }
 }
 
-//================使用网站的好处*icon风格
-.logo-small {
-    color: #1e3f52;
-    font-size: 50px!important;
-}
-.logo {
-    color: #1e3f52;
-    font-size: 200px;
-}
+
 
 //================用户故事*照片缩略图
+.container-fluid3 {
+    padding: 60px 50px;
+}
 .thumbnail {
   padding: 0 0 15px 0;
   border: none;
   border-radius: 0;
+  margin-top: 55px;
 }
 .thumbnail img {
-  width: 70%;
-  height: 70%;
+  width: 84%;
+  height: 84%;
   margin-bottom: 10px;
 }
+/*关于字体的定义见 Common*/
 
 
 //================用户故事*轮播一人一句话
