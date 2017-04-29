@@ -42,7 +42,7 @@ body {
   line-height: 1.8;
   color: #818181;
   margin-top: 50px;//表格与Navbar留白
-  margin-bottom: 285px;//footer置底用（配合footer上的css）
+  margin-bottom: 560px;//footer置底用（配合footer上的css）
 }
 html {//footer置底用
    position: relative;
@@ -128,15 +128,15 @@ html {//footer置底用
 .button-1 {//按钮的位置、大小
   margin-top: 10px;
   width: 250px;
-  height: 50px;
+  height: 60px;
   background-color: #2cc795;
   position: absolute;
   z-index: 10;
 }
 .button-position {
   position: absolute;
-  top: 480px;
-  left: 270px;
+  top: 600px;
+  left: 300px;
 }
 .imgw{
   position: relative;
@@ -164,16 +164,16 @@ html {//footer置底用
   width: 100%;
   li {
     display: inline-block;
-    width: 378px;
-    height: 280px;
-    margin-left: -5px;
-    margin-right: 0px;
+    width: 432px;
+    height: 320px;
+    margin-left: -4px;
+    margin-right: -1px;
     position: relative;
     margin-bottom: -10px;
     overflow: hidden;
     .hjc-img-wrap {
-      width: 380px;
-      height: 280px;
+      width: 480px;
+      height: 480px;
       img {
         width: 100%;
         height: auto;
@@ -245,7 +245,7 @@ html {//footer置底用
 //================用户故事*照片缩略图
 .container-fluid3 {
     padding: 60px 50px;
-    margin-bottom: 300px;//到footer的距离
+    margin-bottom: 40px;//到footer的距离
 }
 .thumbnail {
   padding: 0 0 15px 0;
@@ -268,7 +268,7 @@ p.font-1 {
   font-family: "Microsoft YaHei";
   font-weight: 400;
   font-size: 16px;
-  color: #333333;
+  color: #1e3f52;
 }
 p.font-2 {
   font-family: "Microsoft YaHei";
@@ -297,6 +297,12 @@ p.font-4 {
   width: 160px;
   height: 50px;
   background-color: #2cc795;
+}
+p.font-0 {
+  font-family: "Microsoft YaHei";
+  font-weight: 1000;
+  font-size: 29px;
+  color: #1e3f52;
 }
 /*关于字体的定义见 Common*/
 
