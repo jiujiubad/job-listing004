@@ -20,9 +20,6 @@
 @import "font-awesome";
 
 
-
-
-
 //================常用素材====================
 /*-----------所有版块上下、左右撑开位置*/
 .container-fluid1 {
@@ -143,90 +140,82 @@ html {//footer置底用
 
 
 //================热门职位
-.hjc-ul {
-  padding: 0 0px 0;
+// .hjc-ul {
+//   padding: 0 0px 0;
   // text-align: center;
   // overflow: hidden;
   // height: 710px;
-  width: 100%;
-  li {
-    display: inline-block;
-    width: 432px;
-    height: 320px;
-    margin-left: -4px;
-    margin-right: -1px;
-    position: relative;
-    margin-bottom: -10px;
-    overflow: hidden;
-    .hjc-img-wrap {
-      width: 480px;
-      height: 480px;
-      img {
-        width: 100%;
-        height: auto;
-      }
-      &:hover {
-        transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        -webkit-transition: all .8s;
-        transition: all .8s;
-      }
-    }
-    .title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #1e3f52;
-      font-size: 16px;
-      padding: 6px 25px;
-      color: #fff;
-      transition: opacity .4s ease-in-out;
-    }
-  }
-}
-
-.pro1-1 {
-width: 100%;
-.box1-1 {
-  padding-left: 0px;
-  padding-right: 0px;
-
-//   display: inline-block;
-//   width: 533px;
-//   height: 390px;
-//   margin-left: -4px;
-//   margin-right: -1px;
-//   position: relative;
-//   margin-bottom: -10px;
-//   overflow: hidden;
-//   .pro1-movie {
-//     width: 580px;
-//     height: 480px;
-//     img {
+//   width: 100%;
+//   li {
+//     display: inline-block;
+//     width: 432px;
+//     height: 320px;
+//     margin-left: -4px;
+//     margin-right: -1px;
+//     position: relative;
+//     margin-bottom: -10px;
+//     overflow: hidden;
+//     .hjc-img-wrap {
+//       width: 480px;
+//       height: 480px;
+//       img {
+//         width: 100%;
+//         height: auto;
+//       }
+//       &:hover {
+//         transform: scale(1.2);
+//         -webkit-transform: scale(1.2);
+//         -webkit-transition: all .8s;
+//         transition: all .8s;
+//       }
+//     }
+//     .title {
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
 //       width: 100%;
-//       height: auto;
+//       background: #1e3f52;
+//       font-size: 16px;
+//       padding: 6px 25px;
+//       color: #fff;
+//       transition: opacity .4s ease-in-out;
 //     }
-//     &:hover {
-//       transform: scale(1.2);
-//       -webkit-transform: scale(1.2);
-//       -webkit-transition: all .8s;
-//       transition: all .8s;
-//     }
+//   }
 // }
+
+.production-1 {
+  width: 100%;
+}
+.picture-1 {
+  padding-left: 0px;
+  padding-right: 0px;
+  // display: inline-block;
+  // width: 533px; //这两个属性导致图片，变成绝对定义，不能自适应！！！！bug bug bug
+  // height: 500px; //这两个属性导致图片，变成绝对定义，不能自适应！！！！bug bug bug
+  // margin-left: -4px;
+  // margin-right: -1px;
+  // position: relative;
+  // margin-bottom: -10px;
+  overflow: hidden;
+  .movie-1 {
+    // width: 580px;
+    // height: 480px;//这个属性，导致图片放大动画会向下伸缩！！！！bug bug bug
+    // img {
+    //   width: 100%;
+    //   height: auto;
+    // }
+    &:hover {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -webkit-transition: all .8s;
+      transition: all .8s;
+    }
 }
 }
 
-.pro1-2 {
-width: 100%;
-}
-.box1-2 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
 .title-1 {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 20px;
   position: absolute;//按钮的相对位置
   top: 84%;
   left: 5%;
