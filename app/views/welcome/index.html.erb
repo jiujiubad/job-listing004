@@ -15,90 +15,152 @@
 
 <!-- 大图文字 -->
 <div class="box imgw">
-  <img class="img-responsive" src="http://ww2.sinaimg.cn/large/006tKfTcgy1ff3rj2pweyj31kw0y30vv.jpg" alt="">
-  <div class="button-position">
-    <button id="button1id" name="button1id" class="btn btn-success button-1" onclick="jobs_path('*.jsp')">
-      立 即 开 始
-    </button>
-  </div>
+  <img src="http://ww2.sinaimg.cn/large/006tKfTcgy1ff46sjumcuj31kw0rk462.jpg" alt="">
+  <%= link_to '马上应征', jobs_path, class: 'btn btn-1 btn-1-position' %>
 </div>
 <!-- <a class="btn btn-primary-welcome" href="jobs" role="butto4">立即开始</a></a> -->
 
 
+<div class="row pro1-1">
+  <div class="col-md-3 box1-1">
+    <a href="/jobs/search?utf8=✓&q=程序员">
+      <div class="pro1-movie">
+        <img class="project-img img-responsive" src="http://ww1.sinaimg.cn/large/006tNc79gy1ff4rk267j9j31av0v9u0x.jpg" alt="">
+      </div>
+      <div class="title-1">程序员</div>
+    </a>
+  </div>
+  <div class="col-md-3 box1-1">
+    <a href="/jobs/search?utf8=✓&q=产品经理">
+      <div class="pro1-movie">
+        <img class="project-img img-responsive" src="http://ww4.sinaimg.cn/large/006tNc79gy1ff4rk851dej31av0vahdt.jpg" alt="">
+      </div>
+      <div class="title-1">产品经理</div>
+    </a>
+  </div>
+  <div class="col-md-3 box1-1">
+    <a href="/jobs/search?utf8=✓&q=设计师">
+      <div class="pro1-movie">
+        <img class="project-img img-responsive" src="http://ww2.sinaimg.cn/large/006tNc79gy1ff4rjyk2m9j31av0v9kjl.jpg" alt="">
+      </div>
+      <div class="title-1">设计师</div>
+    </a>
+  </div>
+  <div class="col-md-3 box1-1">
+    <a href="/jobs/search?utf8=✓&q=运营">
+      <div class="pro1-movie">
+        <img class="project-img img-responsive" src="http://ww1.sinaimg.cn/large/006tNc79gy1ff4rjx1jk1j31av0vanpd.jpg" alt="">
+      </div>
+      <div class="title-1">运营</div>
+    </a>
+  </div>
+</div>
+
+<div class="row pro1-2">
+  <div class="col-md-3 box1-2">
+    <a href="/jobs/search?utf8=✓&q=市场与销售">
+      <div class="hjc-img-wrap">
+        <img class="project-img img-responsive" src="http://ww4.sinaimg.cn/large/006tNc79gy1ff4rjxuevbj31av0v9kjl.jpg" alt="">
+      </div>
+      <div class="title-1">市场与销售</div>
+    </a>
+  </div>
+  <div class="col-md-3 box1-2">
+    <a href="/jobs/search?utf8=✓&q=职能">
+      <div class="hjc-img-wrap">
+        <img class="project-img img-responsive" src="http://ww1.sinaimg.cn/large/006tNc79gy1ff4rk1h7qtj31av0v9npd.jpg" alt="">
+      </div>
+      <div class="title-1">职能</div>
+    </a>
+  </div>
+  <div class="col-md-3 box1-2">
+    <a href="/jobs/search?utf8=✓&q=金融">
+      <div class="hjc-img-wrap">
+        <img class="project-img img-responsive" src="http://ww4.sinaimg.cn/large/006tNc79gy1ff4rk0u40wj31av0v9npd.jpg" alt="">
+      </div>
+      <div class="title-1">金融</div>
+    </a>
+  </div>
+  <div class="col-md-3 box1-2">
+    <a href="/jobs" class="more">
+      <div class="hjc-img-wrap">
+        <img class="project-img img-responsive" src="http://ww2.sinaimg.cn/large/006tNc79gy1ff4rjzha4yj31av0v97wi.jpg" alt="">
+      </div>
+      <div class="title-1">查看所有职位</div>
+    </a>
+  </div>
+</div>
 
 
 <!-- 热门职位 -->
-<section class="hot-jobs-category">
-  <!-- <div class="section-content">
-    <h2 class="section-title">正在火热招聘的职业</h2> -->
-    <ul class="hjc-ul">
-      <li>
-        <a href="/jobs/search?utf8=✓&q=程序员">
-          <div class="hjc-img-wrap">
-            <img class="project-img img-responsive" src="http://ww4.sinaimg.cn/large/006tNc79gy1ff3smbwzrhj31av0v97wi.jpg" alt="">
-          </div>
-          <div class="title">程序员</div>
-        </a>
-      </li>
-      <li>
-        <a href="/jobs/search?utf8=✓&q=产品经理">
-          <div class="hjc-img-wrap">
-            <img class="project-img img-responsive" src="http://ww2.sinaimg.cn/large/006tNc79gy1ff3smcm9coj31av0vau0x.jpg" alt="">
-          </div>
-          <div class="title">产品经理</div>
-        </a>
-      </li>
-      <li>
-        <a href="/jobs/search?utf8=✓&q=设计师">
-          <div class="hjc-img-wrap">
-            <img class="project-img img-responsive" src="http://ww4.sinaimg.cn/large/006tNc79gy1ff3sm9dg8kj31av0vc7wi.jpg" alt="">
-          </div>
-          <div class="title">设计师</div>
-        </a>
-      </li>
-      <li>
-        <a href="/jobs/search?utf8=✓&q=运营">
-          <div class="hjc-img-wrap">
-            <img class="project-img img-responsive" src="http://ww3.sinaimg.cn/large/006tNc79gy1ff3smdjflmj31av0vax6p.jpg" alt="">
-          </div>
-          <div class="title">运营</div>
-        </a>
-      </li>
-      <li>
-        <a href="/jobs/search?utf8=✓&q=市场与销售">
-          <div class="hjc-img-wrap">
-            <img class="project-img img-responsive" src="http://ww3.sinaimg.cn/large/006tNc79gy1ff3smb3234j31av0v9u0x.jpg" alt="">
-          </div>
-          <div class="title">市场与销售</div>
-        </a>
-      </li>
-      <li>
-        <a href="/jobs/search?utf8=✓&q=职能">
-          <div class="hjc-img-wrap">
-            <img class="project-img img-responsive" src="http://ww2.sinaimg.cn/large/006tNc79gy1ff3sma8btvj31av0v9x6p.jpg" alt="">
-          </div>
-          <div class="title">职能</div>
-        </a>
-      </li>
-      <li>
-        <a href="/jobs/search?utf8=✓&q=金融">
-          <div class="hjc-img-wrap">
-            <img class="project-img img-responsive" src="http://ww4.sinaimg.cn/large/006tNc79gy1ff3sm71o1mj31av0v9x6p.jpg" alt="">
-          </div>
-          <div class="title">金融</div>
-        </a>
-      </li>
-      <li>
-        <a href="/jobs" class="more">
-          <div class="hjc-img-wrap">
-            <img class="project-img img-responsive" src="http://ww3.sinaimg.cn/large/006tNc79gy1ff3sm8czlvj31av0v9npe.jpg" alt="">
-          </div>
-          <div class="title">查看所有职位</div>
-        </a>
-      </li>
-    </ul>
-  <!-- </div> -->
-</section>
+<!-- <section class="hot-jobs-category">
+  <ul class="hjc-ul">
+    <li>
+      <a href="/jobs/search?utf8=✓&q=程序员">
+        <div class="hjc-img-wrap">
+          <img class="project-img img-responsive" src="http://ww4.sinaimg.cn/large/006tNc79gy1ff3smbwzrhj31av0v97wi.jpg" alt="">
+        </div>
+        <div class="title">程序员</div>
+      </a>
+    </li>
+    <li>
+      <a href="/jobs/search?utf8=✓&q=产品经理">
+        <div class="hjc-img-wrap">
+          <img class="project-img img-responsive" src="http://ww2.sinaimg.cn/large/006tNc79gy1ff3smcm9coj31av0vau0x.jpg" alt="">
+        </div>
+        <div class="title">产品经理</div>
+      </a>
+    </li>
+    <li>
+      <a href="/jobs/search?utf8=✓&q=设计师">
+        <div class="hjc-img-wrap">
+          <img class="project-img img-responsive" src="http://ww4.sinaimg.cn/large/006tKfTcgy1ff4m836uejj31av0v97wi.jpg" alt="">
+        </div>
+        <div class="title">设计师</div>
+      </a>
+    </li>
+    <li>
+      <a href="/jobs/search?utf8=✓&q=运营">
+        <div class="hjc-img-wrap">
+          <img class="project-img img-responsive" src="http://ww3.sinaimg.cn/large/006tNc79gy1ff3smdjflmj31av0vax6p.jpg" alt="">
+        </div>
+        <div class="title">运营</div>
+      </a>
+    </li>
+    <li>
+      <a href="/jobs/search?utf8=✓&q=市场与销售">
+        <div class="hjc-img-wrap">
+          <img class="project-img img-responsive" src="http://ww3.sinaimg.cn/large/006tNc79gy1ff3smb3234j31av0v9u0x.jpg" alt="">
+        </div>
+        <div class="title">市场与销售</div>
+      </a>
+    </li>
+    <li>
+      <a href="/jobs/search?utf8=✓&q=职能">
+        <div class="hjc-img-wrap">
+          <img class="project-img img-responsive" src="http://ww2.sinaimg.cn/large/006tNc79gy1ff3sma8btvj31av0v9x6p.jpg" alt="">
+        </div>
+        <div class="title">职能</div>
+      </a>
+    </li>
+    <li>
+      <a href="/jobs/search?utf8=✓&q=金融">
+        <div class="hjc-img-wrap">
+          <img class="project-img img-responsive" src="http://ww3.sinaimg.cn/large/006tKfTcgy1ff4ma6d3o9j31aw0v9x6p.jpg" alt="">
+        </div>
+        <div class="title">金融</div>
+      </a>
+    </li>
+    <li>
+      <a href="/jobs" class="more">
+        <div class="hjc-img-wrap">
+          <img class="project-img img-responsive" src="http://ww1.sinaimg.cn/large/006tKfTcgy1ff4mb07efoj31av0v9npe.jpg" alt="">
+        </div>
+        <div class="title">查看所有职位</div>
+      </a>
+    </li>
+  </ul>
+</section> -->
 
 
 <!-- 使用我们网站的好处 -->

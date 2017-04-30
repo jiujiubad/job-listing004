@@ -120,44 +120,31 @@ html {//footer置底用
 
 
 //================大图
-.box {
+.box img {
   width: 100%;
   height: 100%;
   margin-top: -50px;
 }
-.button-1 {//按钮的位置、大小
-  margin-top: 10px;
-  width: 250px;
-  height: 60px;
-  background-color: #2cc795;
-  position: absolute;
-  z-index: 10;
-}
-.button-position {
-  position: absolute;
-  top: 600px;
-  left: 300px;
-}
-.imgw{
+.imgw{//大图绝对位置
   position: relative;
 }
-
-// .jumbotron {
-//     background-color: #1e3f52;
-//     color: #fff;
-//     padding: 230px 25px;
-//     font-family: Montserrat, sans-serif;//“蒙特塞拉特”和“拉托”
-//     margin-top: -50px;
-// }
-// .container-fluid .jumbotron{
-// border-radius: 0;//圆角为0
-// }
+.btn-1 {
+  background-color: #2cc795;
+  color: #ffffff;
+  font-size: 32px;
+  width: 250px;
+  height: 60px;
+}
+.btn-1-position {
+    position: absolute;//按钮相对位置
+    top: 65%;
+    left: 17%;
+}
 
 
 //================热门职位
 .hjc-ul {
   padding: 0 0px 0;
-  margin: 0px auto 0;//99
   // text-align: center;
   // overflow: hidden;
   // height: 710px;
@@ -190,21 +177,61 @@ html {//footer置底用
       bottom: 0;
       left: 0;
       width: 100%;
-      background: rgba(0,0,0,.7);
+      background: #1e3f52;
       font-size: 16px;
       padding: 6px 25px;
       color: #fff;
       transition: opacity .4s ease-in-out;
     }
   }
-  .more {
-    .title {
-      height: 150px;
-      line-height: 130px;
-      font-size: 20px;
-    }
-  }
 }
+
+.pro1-1 {
+width: 100%;
+.box1-1 {
+  padding-left: 0px;
+  padding-right: 0px;
+
+//   display: inline-block;
+//   width: 533px;
+//   height: 390px;
+//   margin-left: -4px;
+//   margin-right: -1px;
+//   position: relative;
+//   margin-bottom: -10px;
+//   overflow: hidden;
+//   .pro1-movie {
+//     width: 580px;
+//     height: 480px;
+//     img {
+//       width: 100%;
+//       height: auto;
+//     }
+//     &:hover {
+//       transform: scale(1.2);
+//       -webkit-transform: scale(1.2);
+//       -webkit-transition: all .8s;
+//       transition: all .8s;
+//     }
+// }
+}
+}
+
+.pro1-2 {
+width: 100%;
+}
+.box1-2 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.title-1 {
+  color: #ffffff;
+  font-size: 22px;
+  position: absolute;//按钮的相对位置
+  top: 84%;
+  left: 5%;
+}
+
 
 
 //================使用网站的好处*icon风格
