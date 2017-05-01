@@ -1,74 +1,89 @@
-<div class="container">
+<div class="pull-right">
+  <%= link_to('<span class="glyphicon glyphicon-gift">创建新项目'.html_safe,
+            new_job_path, class: "btn btn-success btn-lg btn3d")%>
+</div>
+<p></p>
+
+<div class="text-center">
+  <h1><strong>项目列表</strong></h1>
+</div>
+
+<!-- 以下为修改内容，上面两块代码是根据我的网站需要保留的。 -->
+
+<!-- <div class="col-md-10 col-md-offset-1 job-content">
+  <div class="row"> -->
+<div class="col-md-12 btn-group select-job-box">
+<div class="row ">
+    <!-- 项目列表 -->
+    <div class="col-md-8 job-content">
+        <% @jobs.each do |job| %>
+          <div class=" job-box">
+            <!-- 有职位资料时 -->
+            <% if @jobs.length > 0 %>
+                <div >
+                    <h4><strong><%= link_to(job.title, job_path(job)) %></strong></h4>
+                </div>
+                <div >
+                    <p style="width: 800px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;"><%= job.description %></p>
+                    <p><%= link_to( "Read more", job_path(job)) %></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p>
+                      <sapn class="fa fa-street-view"></sapn> <%= job.location %>|
+                      <sapn class="fa fa-calendar"></sapn> <%= job.created_at.strftime("%Y-%m-%d") %>|
+                      <sapn class="fa fa-weixin"></sapn> <%= job.resumes.count %>|
+
+                      <sapn class="fa fa-tags">Tags : <span class="label label-info"><%= job.company %></span>
+                  <a href="#"><span class="label label-success"><%= job.category %></span></a>
+                </p>
+            </div>
+
+        <% else %>
+        <!-- 没有职位资料 -->
+            <div >
+                <h2>此分类暂时没有招聘职位哦，请尝试其他选项。</h2>
+            </div>
+        <% end %>  <!--结束判断 -->
+      </div> <!--结束@jobs循环-->
+    <% end %>
+</div>
+
+
+<!-- 职位推荐 -->
+<div class="col-md-3 side-box">
   <div class="row">
-    <h1>浏览职缺</h1>
-    <div class="col-md-12">
-      <div class="dropdown clearfix pull-left">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            排序
-          <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-              <li>
-                <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
-              </li>
-              <li>
-                  <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
-              </li>
-              <li>
-                <%= link_to("按照发表时间排序", jobs_path ) %>
-              </li>
-          </ul>
+      <div class="col-md-12 suggest-title">
+        <h3><sapn class="fa fa-tags"></sapn> <strong>职位推荐</strong></h3>
       </div>
-      <!-- Single button -->
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Action <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
+      <div>
+          <% @suggests.each do |job| %>
+              <div class="col-xs-10 col-xs-offset-1 suggest-content">
+                  <div>
+                    <h4>
+                      <%= link_to job_path(job), target: "_blank" do %>
+                          <%= job.title %> [<%= job.location %>]
+                      <% end %>
+                    </h4>
+                  </div>
+                  <div>
+                    <p>招募职位：<%= job.category %></p>
+                  </div>
+                  <div>
+                    <p>团队名称：<%= job.company %></p>
+                  </div>
+              </div>
+          <% end %> <!-- 结束@suggests循环 -->
       </div>
-    </div>
   </div>
 </div>
-
-
-<% @jobs.each do |job| %>
-  <div class="job-list">
-    <ul>
-      <li>
-        <a href="/job_detail/1411172989.html?ka=job_list_1" ka="job_list_1" data-itemid="1" data-lid="4-5yaLmZh" data-index="1" target="_blank">
-          <div class="job-primary">
-            <div class="info-primary">
-              <h3 class="name">
-                <%= link_to(job.title,   new_job_resume_path(job)) %>
-              </h3>
-                <p class="saraly">
-                  <span class="red">
-                <br>
-                  </span>
-                </p>
-              <p style="font-size:25px"><%= job.description %></p>
-             <br>
-             <p style="font-size:1em;color:#555555"> <%= job.created_at %></p>
-            </div>
-            <div class="info-comapny">
-              <div class="company-text">
-                  <div class="company-logo" style="padding-left: 200px;">
-                    <%= job.wage_lower_bound %>$ - <%= job.wage_upper_bound %>$
-                  </div>
-                  <p style="margin-top: 110px; color:#555555 "><%= job.contact_email %></p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-    </div>
-<% end %>
-<div class="text-center">
-  <%= will_paginate @jobs %>
 </div>
+
+</div>
+</div>
+</div>
+<!-- 分页区块 -->
+
+  <div class="text-center">
+    <%= will_paginate @jobs %>
+  </div>

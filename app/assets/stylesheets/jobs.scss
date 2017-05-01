@@ -3,48 +3,86 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-//--Boss 直聘----//
- .job-list {//颜色框以及阴影效果
-   background: #2cc795;
-   margin: 10px 250px 20px 250px;
-   border-radius: 10px;
-  //  box-shadow: 0px 10px 30px rgba(49, 8, 7, 1);//阴影效果
+.custab{
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
+
+
+/*--- Job ---*/
+
+.job-content{
+  min-height: 725px;
+  margin-top: 100px;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.side-box{
+ display: inline-block;
+ position: absolute;
+ margin-top: 112px; //这些根据你的页面显示自己调节数值
+ margin-left: 35px;
+ padding-bottom: 12.5px;
+ min-width: 260px;
+
+ background-color: #1A6561;
+ color: #fff;
+ box-shadow: 2px 2px 3px #aaa;
+}
+
+.job-box{
+ border: 1.5px solid #ddd;
+ box-shadow: 1px 1px 5px #ccc;
+ margin-top: 12.5px;
+ padding: 15px 1px 1px 20px;
+ background-color: #fff;
+ color: #555;
+ font-size: 16px;
+
+ div{
+ margin-bottom: 5px;
  }
- .job-list li {
-   padding: 40px;
-   overflow: hidden
- }
- // .job-list li:hover {//激活新背景
- //   background-color: #5c7381;
- //   -webkit-transition: all linear .2s;
- //   transition: all linear .2s;
- //   border-radius: 10px;
- //   color: #fff
- // }
- .job-list li p {//工作描述的字体、颜色
-   margin-top: 25px;
-   font-size: 20px;
-   color: #7f3636;
-   font-weight: bold;
- }
- //////////////
- .job-primary {
-   overflow: hidden;
-   color: #fff
- }
- .job-primary .info-primary {//工资的位置
-   float: left;
-   font-size: 15px;
-   color: #4a4160
- }
- .job-primary .info-primary a {//标题的颜色和大小
-   float: left;
-   font-size: 35px;
-   color: #fff
- }
- ///////////////
- .info-comapny {
-   float: right;
-   font-size: 30px;
-   font-weight: bold;
- }
+}
+
+  .suggest-title{
+    padding: 12.5px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+
+
+  .suggest-content{
+    background-color: #fff;
+    padding: 7.5px;
+    border: 0.5px dashed #eee;
+
+
+    h3{
+  margin-top: 1px;
+  font-size: 16px;
+}
+
+p{
+  font-size: 16px;
+  color: #FF7D0A;
+  letter-spacing: -1px;
+}
+
+span{
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+  }

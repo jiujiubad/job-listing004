@@ -37,6 +37,7 @@ class Job < ApplicationRecord
 
   scope :published, -> { where(is_hidden: false) }
   scope :recent, -> { order('created_at DESC') }
+  scope :random5, -> { limit(5).order("RANDOM()") }
 
   has_many :resumes
 end
