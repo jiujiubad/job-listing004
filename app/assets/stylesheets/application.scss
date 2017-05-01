@@ -140,83 +140,53 @@ html {//footer置底用
 
 
 //================热门职位
-// * {
-// padding: 0;
-// margin: 0;
-// }
-// body {
-// background-color: rgb(244, 244, 244);
-// }
-// .container {
-// width: 1000px;
-// margin: auto;
-// margin-top: 3em;
-// clear: left;
-// }
-// .wrap {//图片并排显示
-// -webkit-perspective:400;
-// -moz-perspective:400;
-// float: left;
-// width: 220px;
-// margin-right: 20px;
-// }
-// .image {//图框大小
-// width: 100%;
-// height: 200px;
-// -webkit-transform-style:preserve-3d;
-// -webkit-transition:1.5s;
-// -moz-transform-style:preserve-3d;
-// -moz-transition:1.5s;
-// }
-// img {//图片大小
-// width: 220px;
-// height: 200px;
-// }
-// .wrap:hover .image {//翻转效果
-// -webkit-transform:rotateY(180deg);
-// -moz-transform:rotateY(180deg);
-// }
-// .display {//翻转背面成空白，或可以改其他图片
-// position: absolute;
-// -webkit-backface-visibility:hidden;
-// -moz-backface-visibility:hidden;
-// }
-// .display h3 {
-// color: white;
-// text-align: center;
-// }
-// .back {
-// -webkit-transform:rotateY(180deg);
-// -moz-transform:rotateY(180deg);
-// background: -webkit-gradient(linear,left top,left bottom,from(#fdbb5a), to(#db5726));
-// background: -moz-linear-gradient(top,#fdbb5a,#db5726);
-// width: 220px;
-// height: 200px;
-// line-height: 200px;
-// }
-
-
 .production-1 {
   width: 100%;
 }
-.picture-1 {
+.wrap {//图片并排显示
+-webkit-perspective:400;
+-moz-perspective:400;
   padding-left: 0px;
   padding-right: 0px;
-  overflow: hidden;
 }
-.movie-1:hover {
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -webkit-transition: all .8s;
-    transition: all .8s;
+.picture-1 {//图框大小
+width: 100%;
+margin-bottom: 75%;
+// overflow: hidden;
+-webkit-transform-style:preserve-3d;
+-webkit-transition:.9s;
+-moz-transform-style:preserve-3d;
+-moz-transition:1.5s;
 }
-.title-1 {
-  color: #ffffff;
-  font-size: 20px;
-  position: absolute;//按钮的相对位置
-  top: 84%;
-  left: 5%;
+.wrap:hover .picture-1 {//翻转效果
+-webkit-transform:rotateY(180deg);
+-moz-transform:rotateY(180deg);
 }
+.display {//翻转背面成空白，或可以改其他图片
+position: absolute;
+-webkit-backface-visibility:hidden;
+-moz-backface-visibility:hidden;
+}
+.display h3 {
+color: white;
+text-align: center;
+}
+.back {
+-webkit-transform:rotateY(180deg);
+-moz-transform:rotateY(180deg);
+// background: -webkit-gradient(linear,left top,left bottom,from(#fdbb5a));
+// background: -moz-linear-gradient(top,#fdbb5a,#db5726);
+width: 100%;
+height: 92.5%;
+// line-height: 200px;
+}
+// .title-1 {
+//   color: #ffffff;
+//   font-size: 20px;
+//   position: absolute;//按钮的相对位置
+//   top: 84%;
+//   left: 5%;
+// }
 
 
 
