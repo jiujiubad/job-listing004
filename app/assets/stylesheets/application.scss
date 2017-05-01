@@ -128,20 +128,20 @@ html {//footer置底用
 .btn-1 {
   background-color: #2cc795;
   color: #ffffff;
-  font-size: 32px;
-  width: 250px;
-  height: 60px;
+  width: 13%;
+  height: 5%;
+  position: absolute;//按钮相对位置
+  top: 45%;
+  left: 15%;
+  font-size: 100%;
 }
-.btn-1-position {
-    position: absolute;//按钮相对位置
-    top: 65%;
-    left: 17%;
-}
+
 
 
 //================热门职位
 .production-1 {
   width: 100%;
+  padding-top: 0px;
 }
 .wrap {//图片并排显示
 -webkit-perspective:400;
@@ -154,7 +154,7 @@ width: 100%;
 margin-bottom: 75%;
 // overflow: hidden;
 -webkit-transform-style:preserve-3d;
--webkit-transition:.9s;
+-webkit-transition:.8s;
 -moz-transform-style:preserve-3d;
 -moz-transition:1.5s;
 }
