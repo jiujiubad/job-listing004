@@ -1,63 +1,74 @@
-<div class="col-md-8 col-centered">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3>
-        求职列表
-        <div class="pull-right">
-          <%= link_to("Add a job", new_job_path, :class => "btn btn-default" ) %>
-        </div>
-        <div class="dropdown clearfix pull-right">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              排序
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-                <li>
-                  <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
-                </li>
-                <li>
-                    <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
-                </li>
-                <li>
-                  <%= link_to("按照发表时间排序", jobs_path ) %>
-                </li>
-            </ul>
-        </div>
-      </h3>
-    </div>
-    <div class="panel-body">
-      <table class="table table-boldered">
-          <thead>
-              <tr>
-                  <td>
-                      职缺</td>
-                  <td>薪资下限</td>
-                  <td>薪资上限</td>
-                  <td>刊登时间</td>
-              </tr>
-          </thead>
-          <tbody>
-              <% @jobs.each do |job| %>
-                <tr>
-                  <td>
-                    <%= link_to(job.title, job_path(job)) %>
-                  </td>
-                  <td>
-                    <%= job.wage_lower_bound %>
-                  </td>
-                  <td>
-                    <%= job.wage_upper_bound %>
-                  </td>
-                  <td>
-                    <%= job.created_at %>
-                  </td>
-                </tr>
-              <% end %>
-          </tbody>
-      </table>
-        <div class="text-center">
-          <%= will_paginate @jobs %>
-        </div>
+<div class="container">
+  <div class="row">
+    <h1>浏览职缺</h1>
+    <div class="col-md-12">
+      <div class="dropdown clearfix pull-left">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            排序
+          <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+              <li>
+                <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
+              </li>
+              <li>
+                  <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
+              </li>
+              <li>
+                <%= link_to("按照发表时间排序", jobs_path ) %>
+              </li>
+          </ul>
+      </div>
+      <!-- Single button -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
     </div>
   </div>
+</div>
+
+
+<% @jobs.each do |job| %>
+  <div class="job-list">
+    <ul>
+      <li>
+        <a href="/job_detail/1411172989.html?ka=job_list_1" ka="job_list_1" data-itemid="1" data-lid="4-5yaLmZh" data-index="1" target="_blank">
+          <div class="job-primary">
+            <div class="info-primary">
+              <h3 class="name">
+                <%= link_to(job.title,   new_job_resume_path(job)) %>
+              </h3>
+                <p class="saraly">
+                  <span class="red">
+                <br>
+                  </span>
+                </p>
+              <p style="font-size:25px"><%= job.description %></p>
+             <br>
+             <p style="font-size:1em;color:#555555"> <%= job.created_at %></p>
+            </div>
+            <div class="info-comapny">
+              <div class="company-text">
+                  <div class="company-logo" style="padding-left: 200px;">
+                    <%= job.wage_lower_bound %>$ - <%= job.wage_upper_bound %>$
+                  </div>
+                  <p style="margin-top: 110px; color:#555555 "><%= job.contact_email %></p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+    </div>
+<% end %>
+<div class="text-center">
+  <%= will_paginate @jobs %>
 </div>
