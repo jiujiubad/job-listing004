@@ -1,57 +1,102 @@
-<div class="pull-right">
-  <%= link_to('<span class="glyphicon glyphicon-gift">创建新项目'.html_safe,
-            new_job_path, class: "btn btn-success btn-lg btn3d")%>
-</div>
-<p></p>
-
-<div class="text-center">
-  <h1><strong>项目列表</strong></h1>
-</div>
-
-<!-- 以下为修改内容，上面两块代码是根据我的网站需要保留的。 -->
-
-<!-- <div class="col-md-10 col-md-offset-1 job-content">
-  <div class="row"> -->
-<div class="col-md-12 btn-group select-job-box">
-<div class="row ">
-    <!-- 项目列表 -->
-    <div class="col-md-8 job-content">
-        <% @jobs.each do |job| %>
-          <div class=" job-box">
-            <!-- 有职位资料时 -->
-            <% if @jobs.length > 0 %>
-                <div >
-                    <h4><strong><%= link_to(job.title, job_path(job)) %></strong></h4>
-                </div>
-                <div >
-                    <p style="width: 800px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;"><%= job.description %></p>
-                    <p><%= link_to( "Read more", job_path(job)) %></p>
-                </div>
-                <div>
-                    <p></p>
-                    <p>
-                      <sapn class="fa fa-street-view"></sapn> <%= job.location %>|
-                      <sapn class="fa fa-calendar"></sapn> <%= job.created_at.strftime("%Y-%m-%d") %>|
-                      <sapn class="fa fa-weixin"></sapn> <%= job.resumes.count %>|
-
-                      <sapn class="fa fa-tags">Tags : <span class="label label-info"><%= job.company %></span>
-                  <a href="#"><span class="label label-success"><%= job.category %></span></a>
-                </p>
-            </div>
-
-        <% else %>
-        <!-- 没有职位资料 -->
-            <div >
-                <h2>此分类暂时没有招聘职位哦，请尝试其他选项。</h2>
-            </div>
-        <% end %>  <!--结束判断 -->
-      </div> <!--结束@jobs循环-->
-    <% end %>
+<!-- <div class="nav navbar-nav navbar-right">
+  <%= form_tag search_jobs_path , :method => :get do %>
+  <div class="input-group" id="search-id" >
+    <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="搜索工作">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </div>
+  <% end %>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="dropdown clearfix pull-left btn-job">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            排序
+          <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+              <li>
+                <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
+              </li>
+              <li>
+                  <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
+              </li>
+              <li>
+                <%= link_to("按照发表时间排序", jobs_path ) %>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
+<!-- job blocks section -->
+<div class="col-md-9">
+	<div class="row">
+	<div class="col-md-12">
+	  <% @jobs.each do |job| %>
+	    <section id="job-section">
+	        <div class="job-section">
+	          <div class="col-sm-2">
+							<!-- job logo -->
+							<% if job.company == 'Facebook' %>
+								<img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
+							<% elsif job.company == 'Google'%>
+								<img class="job-logo" src='http://i.imgur.com/afZPGbL.png'>
+							<% elsif job.company == 'Amazon'%>
+								<img class="job-logo" src='http://i.imgur.com/eJwYa9C.gif'>
+							<% elsif job.company == 'Uber'%>
+								<img class="job-logo" src='http://i.imgur.com/SOnKxie.jpg'>
+							<% elsif job.company == 'Twitter'%>
+								<img class="job-logo" src='http://i.imgur.com/9qGrqGG.png'>
+							<% else %>
+								<i class="logo-mini fa fa-file-text fa-fw fa-5x"  aria-hidden="true"></i>
+							<% end %>
+							<!-- job logo end -->
+	          </div>
+	          <div class="col-sm-8">
+							<div class="title">
+								<!-- title -->
+								<span><%= link_to(job.title, job_path(job)) %></span>
+								<!-- starred / star -->
+
+	            </div>
+							<p>
+								<%= job.category %>
+							</p>
+							<p>
+	              <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
+	              <%= job.location %>
+
+	              <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
+	              <%= job.wage_lower_bound / 1000 %> K -
+	              <%= job.wage_upper_bound / 1000 %> K
+	            </p>
+	            <p>
+	              <%=  job.description %>
+	            </p>
+              <p style="font-size:1em;color:#555555"> <%= job.created_at %></p>
+	          </div>
+						<!-- button -->
+	          <div class="col-sm-2 pull-right">
+							<div class="button">
+								<%= link_to(t('投递简历'), new_job_resume_path(job), class: "btn btn-info btn-middle ", method: :get) %>
+	            <div>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
+	  <% end %>
+	</div>
+</div>
+</div>
 
 <!-- 职位推荐 -->
-<div class="col-md-3 side-box">
+<div class="col-md-2 side-box">
   <div class="row">
       <div class="col-md-12 suggest-title">
         <h3><sapn class="fa fa-tags"></sapn> <strong>职位推荐</strong></h3>
@@ -79,11 +124,9 @@
 </div>
 </div>
 
+<!-- pagination -->
+<div class="col-md-10 col-md-offset-1 paginate-job">
+	<div class="text-center">
+		<%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+	</div>
 </div>
-</div>
-</div>
-<!-- 分页区块 -->
-
-  <div class="text-center">
-    <%= will_paginate @jobs %>
-  </div>
