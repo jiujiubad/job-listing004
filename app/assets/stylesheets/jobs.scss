@@ -3,117 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+//======== Job 背景/标题 =========//
 .panel-1 {
-  border: none!important;
-  box-shadow: none!important;
-}
-.panel-2 {
   border: none!important;
   box-shadow: none!important;
   background-color: #f8f8f8!important;
 }
-.hr-2 {
-  height: 10px;
+.row-2 {
+  background-color: #f8f8f8;
+  margin-top: -50px;
+  padding-top: 50px;
+  margin-bottom: -10px;
+  padding-bottom: 50px;
+}
+.job-title-0 {
   background-color: #ffffff;
-}
-
-//---------job index---------
-.btn-job {
-  margin-left: -160px;//排序按钮
-  margin-bottom: 30px;
-}
-#job-section {
-padding: 0.5rem 0 0.5rem 0;
-text-align: center;
-position: relative;
-.title {
- width: 40rem;
- font-size: 2rem;
- text-align: left;
- color: black;
- margin: 0;
- padding: 0em 2em 0em 1em;
- padding-bottom: 0.5rem;
-}
-.job-section p {
- width: 40rem;
- text-align: justify;
- padding: 0em 0em 0em 1.4em;
- margin-bottom: 1em;
-}
-.job-section {
- background-color: #f8f8f8;
- display: inline-block;
- padding: 50px 80px 50px 80px;//=======大框框的范围大小
- -moz-box-shadow: 0px 0px 57px 0px rgba(4,6,9,0.25);
- // box-shadow: 0px 0px 3px 0px rgba(4,6,9,0.25);
- border-radius: .15rem;
- margin-left: 10px;
-}
-.icon{
- padding-left: 1em;
-}
-.job-logo{
- margin: 10px;
- border-radius: 80%;
-}
-.button {
- margin-top: 8px;
- vertical-align: middle;
-}
-}
-
-/*--- Job推荐 ---*/
-.side-box{
- display: inline-block;
- position: absolute;
- margin-top: 10px; //这些根据你的页面显示自己调节数值
- padding-bottom: 12.5px;
- min-width: 260px;
- margin-left: -100px;
-
- background-color: #1e3f52;
- color: #fff;
- box-shadow: 2px 2px 3px #aaa;
- border-radius: .25rem;
-}
-.suggest-title{
-  padding: 12.5px;
   text-align: center;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-}
-.suggest-content{
-  border-radius: .25rem;
-  background-color: #fff;
-  padding: 7.5px;
-  border: 0.5px dashed #eee;
-  h3{
-margin-top: 1px;
-font-size: 16px;
-}
-p{
-  font-size: 16px;
-  color: #FF7D0A;
-  letter-spacing: -1px;
-}
-span{
-  color: #aaa;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-}
-}
-.paginate-job {//----------排序数字----------
-  margin: 70px 0px 70px 0px;
+  padding: 30px 0px;
+  margin-right: 35px;
 }
 
-
-
-//--Boss 直聘----//
+//========= JOB 直聘 ==========//
  .job-list {//颜色框以及阴影效果
-   background: #2cc795;
+   background: #ffffff;
   //  margin: 10px 250px 20px 250px;
-   border-radius: 10px;
+  //  border-radius: 10px;
   //  box-shadow: 0px 10px 30px rgba(49, 8, 7, 1);//阴影效果
  }
  .job-list li {
@@ -134,23 +49,35 @@ span{
    font-weight: bold;
  }
  //////////////
- .job-primary {
-   overflow: hidden;
-   color: #fff
- }
- .job-primary .info-primary {//工资的位置
+ .job-primary .info-primary {//工资设置
    float: left;
    font-size: 15px;
-   color: #4a4160
  }
- .job-primary .info-primary a {//标题的颜色和大小
+ .job-primary .info-primary a {//标题设置
    float: left;
    font-size: 35px;
-   color: #fff
  }
  ///////////////
  .info-comapny {
    float: right;
    font-size: 30px;
    font-weight: bold;
+ }
+
+ //======== Job 推荐 =========//
+ .suggest-title{//标题部分
+   margin: 0px 34px 0px 34px;
+   padding: 10px 10px 10px 10px;
+   background-color: #ffffff;
+ }
+ .suggest-content{//正文部分
+   border-radius: .25rem;
+   background-color: #fff;
+   padding: 7.5px;
+   border-top: 4px solid #f8f8f8;
+ }
+
+//===========分页 paginate=========//
+ .paginate-job {
+   margin: 40px 0px 70px 0px;
  }
