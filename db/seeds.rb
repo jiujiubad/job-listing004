@@ -43,16 +43,24 @@ job_yuyu = [
   'yuyu高级客服经理'
 ]
 
+job_cc = [
+  '广州',
+  '深圳',
+  '上海',
+  '北京'
+]
+
 create_jobs =
 create_jobs = for i in 1..10 do
-                Job.create!([title: job_info[rand(job_info.length)],
+                Job.create!([title: job_info[rand(job_info.length)], city: job_cc[rand(job_cc.length)],
                 description: job_yuyu[rand(job_yuyu.length)], wage_upper_bound: rand(40..79) * 1000,
                 wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
               end
 
 for i in 1..10 do
-  Job.create!([title: job_info[rand(job_info.length)], description: "这是一个隐藏的工作",
-  wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'true'])
+  Job.create!([title: job_info[rand(job_info.length)], city: job_cc[rand(job_cc.length)],
+  description: job_yuyu[rand(job_yuyu.length)], wage_upper_bound: rand(40..79) * 1000,
+  wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
 end
 
 puts '10 Public jobs created.'

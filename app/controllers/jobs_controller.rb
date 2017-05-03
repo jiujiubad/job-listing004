@@ -81,7 +81,7 @@ class JobsController < ApplicationController
   end
 
   def search_criteria(query_string)
-    { :title_cont => query_string }
+    { :title_or_city_or_category_or_location_or_company_cont => query_string }
   end
 
   def validate_city_key
