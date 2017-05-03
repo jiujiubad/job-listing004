@@ -26,7 +26,7 @@
           <div class="job-list">
             <ul>
               <li>
-                <a href="/job_detail/1411172989.html?ka=job_list_1" ka="job_list_1" data-itemid="1" data-lid="4-5yaLmZh" data-index="1" target="_blank">
+                <!-- <a href="/job_detail/1411172989.html?ka=job_list_1" ka="job_list_1" data-itemid="1" data-lid="4-5yaLmZh" data-index="1" target="_blank"> -->
                   <div class="job-primary">
 <!-- ①工作区 -->
                     <div class="col-md-2">
@@ -35,7 +35,7 @@
 <!-- ②工作区 -->
                     <div class="col-md-7 info-primary">
                       <h3 class="name">
-                        <%= link_to(job.title,   new_job_resume_path(job)) %>
+                        <%= link_to(job.title, job_path(job)) %>
                       </h3>
                         <p class="saraly">
                           <span class="red">
@@ -56,7 +56,7 @@
                       </div>
                     </div>
                   </div>
-                </a>
+                <!-- </a> -->
               </li>
             </div>
         <% end %>
