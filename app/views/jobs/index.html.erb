@@ -1,226 +1,91 @@
+<div class="row-2">
 <div class="col-md-10 col-centered">
-  <div class="panel panel-default panel-1">
+  <div class="panel panel-default panel-2">
     <div class="panel-body">
-<!-- 标题 -->
+
       <div class="col-md-12">
-        <div class="panel panel-default panel-1">
-          <div class="panel-body">
-            <div class="col-md-12">
-              <div class="panel panel-default panel-2">
-                <div class="panel-body text-center">
-                  <h2 style="margin-bottom-20px;">浏览职缺</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 style="background-color:#ffffff;">发达森</h1>
       </div>
-<!-- 主体 -->
-      <div class="col-md-9">
-        <div class="panel panel-default panel-1">
-          <div class="panel-body">
-<!-- ①搜索栏 -->
-            <div class="col-md-12">
-              <div class="panel panel-default panel-2">
-                <div class="panel-body">
-                  <!-- search column-->
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      排序搜索
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><%= link_to("薪资从低到高", jobs_path(:order => "by_lower_bound")) %></li>
-                      <li><%= link_to("薪资从高到低", jobs_path(:order => "by_upper_bound")) %></li>
-                      <li><%= link_to("发布时间", jobs_path ) %></li>
-                    </ul>
+
+      <div class="col-md-8">
+        <p style="background-color:#ffffff;">开机劳烦</p>
+      </div>
+
+      <div class="col-md-8">
+      <% @jobs.each do |job| %>
+        <div class="job-list">
+          <ul>
+            <li>
+              <a href="/job_detail/1411172989.html?ka=job_list_1" ka="job_list_1" data-itemid="1" data-lid="4-5yaLmZh" data-index="1" target="_blank">
+                <div class="job-primary">
+
+                  <div class="col-md-2">
+                    <img class="job-logo" src='http://i.imgur.com/afZPGbL.png'>
                   </div>
+
+                  <div class="col-md-7 info-primary">
+                    <h3 class="name">
+                      <%= link_to(job.title,   new_job_resume_path(job)) %>
+                    </h3>
+                      <p class="saraly">
+                        <span class="red">
+                      <br>
+                        </span>
+                      </p>
+                    <p style="font-size:25px"><%= job.description %></p>
+                   <br>
+                   <p style="font-size:1em;color:#555555"> <%= job.created_at %></p>
+                  </div>
+
+                  <div class="col-md-3 info-comapny">
+                    <div class="company-text">
+                        <div class="company-logo" style="font-size:20px;">
+                          <%= job.wage_lower_bound %>$ - <%= job.wage_upper_bound %>$
+                        </div>
+                        <p style="margin-top: 110px; color:#555555 "><%= job.contact_email %></p>
+                    </div>
+                  </div>
+
                 </div>
-              </div>
-            </div>
-<!-- ②城市、岗位 -->
-            <!-- <div class="col-md-12">
-              <div class="panel panel-default panel-2">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div> -->
-<!-- ①工作、岗位 -->
-            <div class="col-md-12">
-              <div class="panel panel-default panel-2">
-                <div class="panel-body">
-                  <!--  job blocks section -->
-                  	    <% @jobs.each do |job| %>
-                  	      <section id="job-section">
-                  	        <div class="job-section">
-                  <!-- job logo -->
-                  	          <div class="col-sm-2">
-                  							<% if job.company == 'Facebook' %>
-                  								<img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
-                  							<% elsif job.company == 'Google'%>
-                  								<img class="job-logo" src='http://i.imgur.com/afZPGbL.png'>
-                  							<% elsif job.company == 'Amazon'%>
-                  								<img class="job-logo" src='http://i.imgur.com/eJwYa9C.gif'>
-                  							<% elsif job.company == 'Uber'%>
-                  								<img class="job-logo" src='http://i.imgur.com/SOnKxie.jpg'>
-                  							<% elsif job.company == 'Twitter'%>
-                  								<img class="job-logo" src='http://i.imgur.com/9qGrqGG.png'>
-                  							<% else %>
-                  								<i class="logo-mini fa fa-file-text fa-fw fa-5x"  aria-hidden="true"></i>
-                  							<% end %>
-                  	          </div>
-                  <!-- title -->
-                  	          <div class="col-sm-8">
-                  							<div class="title">
-                  								<span><%= link_to(job.title, job_path(job)) %></span>
-                  	            </div>
-                  							<p>
-                  								<%= job.category %>
-                  							</p>
-                  							<p>
-                  	              <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
-                  	              <%= job.location %>
-                  	              <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
-                  	              <%= job.wage_lower_bound / 1000 %> K -
-                  	              <%= job.wage_upper_bound / 1000 %> K
-                  	            </p>
-                  	            <p>
-                  	              <%=  job.description %>
-                  	            </p>
-                                <p style="font-size:1em;color:#555555"> <%= job.created_at %></p>
-                  	          </div>
-                  <!-- button -->
-                  	          <div class="col-sm-2 pull-right">
-                  							<div class="button">
-                  								<%= link_to(t('投递简历'), new_job_resume_path(job), class: "btn btn-info btn-middle ", method: :get) %>
-                  	            </div>
-                  	          </div>
-                  	      </section>
-                          <hr/ class="hr-2">
-                  	    <% end %>
-                  	  </div>
-
-
-              </div>
-            </div>
-
+              </a>
+            </li>
           </div>
+      <% end %>
+      </div>
+
+      <div class="col-md-4">
+        <div class="col-md-12 suggest-title">
+          <h3><sapn class="fa fa-tags"></sapn> <strong>职位推荐</strong></h3>
+        </div>
+        <div>
+            <% @suggests.each do |job| %>
+                <div class="col-xs-10 col-xs-offset-1 suggest-content">
+                    <div>
+                      <h4>
+                        <%= link_to job_path(job), target: "_blank" do %>
+                            <%= job.title %> [<%= job.location %>]
+                        <% end %>
+                      </h4>
+                    </div>
+                    <div>
+                      <p>招募职位：<%= job.category %></p>
+                    </div>
+                    <div>
+                      <p>团队名称：<%= job.company %></p>
+                    </div>
+                </div>
+            <% end %> <!-- 结束@suggests循环 -->
         </div>
       </div>
-<!-- 推荐 5个职位 -->
-      <div class="col-md-3">
-        <div class="panel panel-default panel-1">
-          <div class="panel-body">
 
-            <div class="col-md-12">
-              <div class="panel panel-default panel-2">
-                <div class="panel-heading">您可能喜欢</div>
-                <div class="panel-body">
-                  发达森
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
 </div>
-
-
-
-
-
-<!--  job blocks section -->
-<div class="col-md-9">
-	<div class="row">
-    <div class="col-md-12">
-	    <% @jobs.each do |job| %>
-	      <section id="job-section">
-	        <div class="job-section">
-<!-- job logo -->
-	          <div class="col-sm-2">
-							<% if job.company == 'Facebook' %>
-								<img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
-							<% elsif job.company == 'Google'%>
-								<img class="job-logo" src='http://i.imgur.com/afZPGbL.png'>
-							<% elsif job.company == 'Amazon'%>
-								<img class="job-logo" src='http://i.imgur.com/eJwYa9C.gif'>
-							<% elsif job.company == 'Uber'%>
-								<img class="job-logo" src='http://i.imgur.com/SOnKxie.jpg'>
-							<% elsif job.company == 'Twitter'%>
-								<img class="job-logo" src='http://i.imgur.com/9qGrqGG.png'>
-							<% else %>
-								<i class="logo-mini fa fa-file-text fa-fw fa-5x"  aria-hidden="true"></i>
-							<% end %>
-	          </div>
-<!-- title -->
-	          <div class="col-sm-8">
-							<div class="title">
-								<span><%= link_to(job.title, job_path(job)) %></span>
-	            </div>
-							<p>
-								<%= job.category %>
-							</p>
-							<p>
-	              <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
-	              <%= job.location %>
-	              <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
-	              <%= job.wage_lower_bound / 1000 %> K -
-	              <%= job.wage_upper_bound / 1000 %> K
-	            </p>
-	            <p>
-	              <%=  job.description %>
-	            </p>
-              <p style="font-size:1em;color:#555555"> <%= job.created_at %></p>
-	          </div>
-<!-- button -->
-	          <div class="col-sm-2 pull-right">
-							<div class="button">
-								<%= link_to(t('投递简历'), new_job_resume_path(job), class: "btn btn-info btn-middle ", method: :get) %>
-	            </div>
-	          </div>
-	      </section>
-	    <% end %>
-	  </div>
-  </div>
-</div>
-
-<!-- 职位推荐 -->
-<div class="col-md-2 side-box">
-  <div class="row">
-      <div class="col-md-12 suggest-title">
-        <h3><sapn class="fa fa-tags"></sapn> <strong>职位推荐</strong></h3>
-      </div>
-      <div>
-          <% @suggests.each do |job| %>
-              <div class="col-xs-10 col-xs-offset-1 suggest-content">
-                  <div>
-                    <h4>
-                      <%= link_to job_path(job), target: "_blank" do %>
-                          <%= job.title %> [<%= job.location %>]
-                      <% end %>
-                    </h4>
-                  </div>
-                  <div>
-                    <p>招募职位：<%= job.category %></p>
-                  </div>
-                  <div>
-                    <p>团队名称：<%= job.company %></p>
-                  </div>
-              </div>
-          <% end %> <!-- 结束@suggests循环 -->
-      </div>
-  </div>
-</div>
-</div>
-
 <!-- pagination -->
 <div class="col-md-10 col-md-offset-1 paginate-job">
 	<div class="text-center">
 		<%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
 	</div>
 </div>
+</div
