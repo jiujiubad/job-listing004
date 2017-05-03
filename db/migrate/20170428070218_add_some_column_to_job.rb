@@ -5,5 +5,6 @@ class AddSomeColumnToJob < ActiveRecord::Migration[5.0]
     add_column :jobs, :company_url, :string
     add_column :jobs, :company_contact_email, :string
     add_column :jobs, :category, :string
+    add_column :jobs, :city, :string
   end
 end

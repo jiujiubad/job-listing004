@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170428070218) do
     t.string   "company_url"
     t.string   "company_contact_email"
     t.string   "category"
+    t.string   "city"
   end
 
   create_table "resumes", force: :cascade do |t|
