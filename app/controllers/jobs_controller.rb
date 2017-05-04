@@ -72,7 +72,9 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden, :location, :company, :company_url, :company_contact_email, :category, :city)
+    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden,
+    :title_request, :description_simple, :category, :city, :location, :company_name, :company_info, :company_url,
+    :company_email, :company_logo, :company_picture, :company_wearfare, :company_year, :company_people, :company_hr)
   end
 
   def validate_search_key

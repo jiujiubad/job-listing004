@@ -15,18 +15,27 @@ ActiveRecord::Schema.define(version: 20170428070218) do
   create_table "jobs", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.integer  "wage_lower_bound"
     t.integer  "wage_upper_bound"
     t.string   "contact_email"
-    t.boolean  "is_hidden",             default: true
-    t.string   "location"
-    t.string   "company"
-    t.string   "company_url"
-    t.string   "company_contact_email"
+    t.boolean  "is_hidden",          default: true
+    t.string   "title_request"
+    t.string   "description_simple"
     t.string   "category"
     t.string   "city"
+    t.string   "location"
+    t.string   "company_name"
+    t.string   "company_info"
+    t.string   "company_url"
+    t.string   "company_email"
+    t.string   "company_logo"
+    t.string   "company_picture"
+    t.string   "company_wearfare"
+    t.string   "company_year"
+    t.string   "company_people"
+    t.string   "company_hr"
   end
 
   create_table "resumes", force: :cascade do |t|
