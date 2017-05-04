@@ -2,16 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-//======== Job 背景/标题 =========//
+//======== index 背景/标题 =========//
 .panel-1 {
   border: none!important;
   box-shadow: none!important;
   background-color: #f8f8f8!important;
+  border-radius: 0!important;
 }
 .row-2 {
-  background-color: #f8f8f8;
+  background-color: #1e3f52;
   margin-top: -50px;
   padding-top: 50px;
   margin-bottom: -10px;
@@ -20,11 +19,10 @@
 .job-title-0 {
   background-color: #ffffff;
   text-align: center;
-  padding: 30px 0px;
-  margin-right: 35px;
+  padding: 20px 0px;
+  margin: 15px 0;
 }
-
-//========= JOB 直聘 ==========//
+//========= index 直聘 ==========//
  .job-list {//颜色框以及阴影效果
    background: #ffffff;
   //  margin: 10px 250px 20px 250px;
@@ -42,14 +40,10 @@
   margin-left: -50px;//向左移动的动画效果差
  }
  .job-list li p {//工作描述的字体、颜色
-   margin-top: 25px;
-   font-size: 20px;
-   color: #7f3636;
-   font-weight: bold;
  }
  .job-logo {
-   width: 80px;
-   height: 80px;
+   width: 65px;
+   height: 65px;
  }
  //////////////
  .job-primary .info-primary {//工资设置
@@ -57,30 +51,17 @@
    font-size: 15px;
  }
  .job-primary .info-primary a {//标题设置
-   float: left;
-   font-size: 35px;
  }
- ///////////////
- .info-comapny {
-   float: right;
-   font-size: 30px;
-   font-weight: bold;
- }
-
- //======== Job 推荐 =========//
+ //====== index 推荐职位 =======//
  .suggest-title{//标题部分
-   margin: 0px 34px 0px 34px;
-   padding: 10px 10px 10px 10px;
    background-color: #ffffff;
  }
  .suggest-content{//正文部分
-   border-radius: .25rem;
    background-color: #fff;
-   padding: 7.5px;
    border-top: 4px solid #f8f8f8;
+   padding: 10px;
  }
-
-//===========分页 paginate=========//
+//===========index 分页=========//
  .paginate-job {
    margin: 40px 0px 70px 0px;
  }
