@@ -1,17 +1,48 @@
-<hr width=0>
-<div class="col-md-6 col-centered">
-  <div class="panel panel-default">
-    <div class="panel-heading">Add a job</div>
-    <div class="panel-body">
-        <%= simple_form_for [:admin, @job] do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :wage_lower_bound, :label => "薪资下限" %>
-        <%= f.input :wage_upper_bound, :label => "薪资上限" %>
-        <%= f.input :contact_email %>
-        <%= f.input :is_hidden %>
-        <%= f.submit "Submit" %>
-      <% end %>
+<div class="row-2">
+  <div class="col-md-9 col-centered">
+    <div class="panel panel-default panel-1">
+      <div class="panel-body"  style="padding-top:30px; padding-bottom:30px;">
+
+        <div class="col-md-2">
+          <%= link_to ('职位管理'), admin_jobs_path, class: 'btn btn-lg btn-admin-job-1', style: 'margin-top:10px;' %>
+          <%= link_to ('添加职位'), new_admin_job_path, class: 'btn btn-lg btn-admin-job-1', style: 'margin-top:-20px;' %>
+        </div>
+
+<!-- 工作 描述 -->
+        <div class="col-md-8">
+          <div class="col-md-12 row-3">
+            <h3>
+              填写职位信息
+            </h3>
+          </div>
+
+          <div class="col-md-12 row-3 input-style-1">
+            <%= simple_form_for [:admin, @job] do |f| %>
+              <%= f.input :title, :label => false, placeholder:'* 职位名称', input_html: { class: 'input-style-2 input-title' } %>
+              <%= f.input :category, :label => false, placeholder:'职位类型', input_html: { class: 'input-style-2' } %>
+              <!-- <%= f.input :company_name, :label => false, placeholder:'公司名称', input_html: { class: 'input-style-2' } %> -->
+              <%= f.input :wage_lower_bound, :label => false, placeholder:'* 薪资下限', input_html: { class: 'input-style-2 input-wage' } %>
+              <%= f.input :wage_upper_bound, :label => false, placeholder:'* 薪资上限', input_html: { class: 'input-style-2 input-wage' } %>
+              <%= f.input :description, :label => false, placeholder:'岗位职责', input_html: { class: 'input-style-3' } %>
+              <%= f.input :description, :label => false, placeholder:'任职要求', input_html: { class: 'input-style-3' } %>
+              <%= f.input :company_wearfare, :label => false, placeholder:'公司福利', input_html: { class: 'input-style-2' } %>
+              <%= f.input :city, :label => false, placeholder:'城市', input_html: { class: 'input-style-2' } %>
+              <%= f.input :contact_email, :label => false, placeholder:'邮箱', input_html: { class: 'input-style-2' } %>
+              <%= f.input :is_hidden, :label => '是否隐藏职位？' %>
+              <%= f.submit "完成" %>
+            <% end %>
+          </div>
+        </div>
+
+<!-- 公司 信息 -->
+        <div class="col-md-2">
+          <div class="col-md-12 logo-1 text-center row-3">
+            <img src='<%= image_url 'tengxun.png' %>' style="width:80px; height:80px;">
+            <h4 style="margin-bottom:25px;">腾讯</h4>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>

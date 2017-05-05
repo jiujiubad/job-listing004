@@ -4,8 +4,8 @@
       <div class="panel-body"  style="padding-top:30px; padding-bottom:30px;">
 
         <div class="col-md-2">
-          <%= link_to ('职位管理'), admin_jobs_path, class: 'btn btn-lg btn-primary btn-admin-job-1' %>
-          <%= link_to ('添加职位'), new_admin_job_path, class: 'btn btn-lg btn-primary btn-admin-job-2' %>
+          <%= link_to ('职位管理'), admin_jobs_path, class: 'btn btn-lg btn-admin-job-1', style: 'margin-top:10px;' %>
+          <%= link_to ('添加职位'), new_admin_job_path, class: 'btn btn-lg btn-admin-job-1', style: 'margin-top:-20px;' %>
         </div>
 
 <!-- 工作 描述 -->
@@ -21,10 +21,8 @@
               <%= f.input :title, :label => false, placeholder:'* 职位名称', input_html: { class: 'input-style-2 input-title' } %>
               <%= f.input :category, :label => false, placeholder:'职位类型', input_html: { class: 'input-style-2' } %>
               <!-- <%= f.input :company_name, :label => false, placeholder:'公司名称', input_html: { class: 'input-style-2' } %> -->
-              <!-- <%= f.input :wage_lower_bound, :as => :string, class: "wage" %> <span class="wage-form">k ~</span>
-              <%= f.input_field :wage_upper_bound, :as => :string, class: "wage" %> <span class="wage-form">k</span> -->
-              <%= f.input :wage_lower_bound, :label => false, placeholder:'* 薪资下限', input_html: { class: 'input-style-2 input-wage-lower' } %>
-              <%= f.input :wage_upper_bound, :label => false, placeholder:'* 薪资上限', input_html: { class: 'input-style-2 input-wage-upper' } %>
+              <%= f.input :wage_lower_bound, :label => false, placeholder:'* 薪资下限', input_html: { class: 'input-style-2 input-wage' } %>
+              <%= f.input :wage_upper_bound, :label => false, placeholder:'* 薪资上限', input_html: { class: 'input-style-2 input-wage' } %>
               <%= f.input :description, :label => false, placeholder:'岗位职责', input_html: { class: 'input-style-3' } %>
               <%= f.input :description, :label => false, placeholder:'任职要求', input_html: { class: 'input-style-3' } %>
               <%= f.input :company_wearfare, :label => false, placeholder:'公司福利', input_html: { class: 'input-style-2' } %>

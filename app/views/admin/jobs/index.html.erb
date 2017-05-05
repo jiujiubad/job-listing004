@@ -4,8 +4,8 @@
       <div class="panel-body"  style="padding-top:30px; padding-bottom:30px;">
 
         <div class="col-md-2">
-          <%= link_to ('职位管理'), admin_jobs_path, class: 'btn btn-lg btn-primary btn-admin-job-1' %>
-          <%= link_to ('添加职位'), new_admin_job_path, class: 'btn btn-lg btn-primary btn-admin-job-2' %>
+          <%= link_to ('职位管理'), admin_jobs_path, class: 'btn btn-lg btn-admin-job-1', style: 'margin-top:10px;' %>
+          <%= link_to ('添加职位'), new_admin_job_path, class: 'btn btn-lg btn-admin-job-1', style: 'margin-top:-20px;' %>
         </div>
 
 <!-- 工作 描述 -->
@@ -56,12 +56,12 @@
                   <%= job.wage_upper_bound*0.001 %>k
                 </td>
                 <td style="vertical-align:middle;">
-                  <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
-                  <%= link_to("Destroy", admin_job_path(job), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" }) %>
+                  <%= link_to("编辑", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
+                  <%= link_to("删除", admin_job_path(job), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" }) %>
                   <% if job.is_hidden %>
-                  <%= link_to("Publish", publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-success") %>
+                  <%= link_to("公开", publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-success") %>
                 <% else %>
-                  <%= link_to("Hide", hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-warning") %>
+                  <%= link_to("私密", hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-warning") %>
                   <% end %>
                 </td>
                 <td style="vertical-align:middle;">
