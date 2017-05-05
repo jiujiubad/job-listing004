@@ -23,122 +23,106 @@
   margin: 15px 0;
 }
 //========= index 直聘 ==========//
- .job-list {//颜色框以及阴影效果
-   background: #ffffff;
-  //  margin: 10px 250px 20px 250px;
-  //  border-radius: 10px;
-  //  box-shadow: 0px 10px 30px rgba(49, 8, 7, 1);//阴影效果
- }
- .job-list li {
-   padding: 10px;
-   overflow: hidden
- }
- .job-list li:hover {//激活新背景*********可以用作动画效果********
-   background-color: #f8f8f8;
-   -webkit-transition: all linear .2s;
-   transition: all linear .2s;
-   margin-left: -50px;//向左移动的动画效果差
- }
- .job-list li p {//工作描述的字体、颜色
- }
- .job-logo {
-   width: 65px;
-   height: 65px;
- }
- //////////////
- .job-primary .info-primary {//工资设置
-   float: left;
-   font-size: 15px;
- }
- .job-primary .info-primary a {//标题设置
- }
- //====== index 推荐职位 =======//
- .suggest-title{//标题部分
-   background-color: #ffffff;
- }
- .suggest-content{//正文部分
-   background-color: #fff;
-   border-top: 4px solid #f8f8f8;
-   padding: 10px;
- }
+.job-list {//颜色框以及阴影效果
+ background: #ffffff;
+//  margin: 10px 250px 20px 250px;
+//  border-radius: 10px;
+//  box-shadow: 0px 10px 30px rgba(49, 8, 7, 1);//阴影效果
+}
+.job-list li {
+ padding: 10px;
+ overflow: hidden
+}
+.job-list li:hover {//激活新背景*********可以用作动画效果********
+ background-color: #f8f8f8;
+ -webkit-transition: all linear .2s;
+ transition: all linear .2s;
+ margin-left: -50px;//向左移动的动画效果差
+}
+.job-list li p {//工作描述的字体、颜色
+}
+.job-logo {
+ width: 65px;
+ height: 65px;
+}
+//////////////
+.job-primary .info-primary {//工资设置
+ float: left;
+ font-size: 15px;
+}
+.job-primary .info-primary a {//标题设置
+}
+//====== index 推荐职位 =======//
+.suggest-title{//标题部分
+ background-color: #ffffff;
+}
+.suggest-content{//正文部分
+ background-color: #fff;
+ border-top: 4px solid #f8f8f8;
+ padding: 10px;
+}
 //===========index 分页=========//
- .paginate-job-1 {
-   margin: 40px 0px 70px 0px;
- }
+.paginate-job-1 {
+ margin: 40px 0px 70px 0px;
+}
 
 
- //===========Show =========//
- .logo-1 img {
-     width: 150px; //定制图片宽度
-     height: 150px; //定制图片高度
-     margin-top: 30px;
-     margin-bottom: 30px;
- }
- .row-3 {
-  background-color: #fff;
-  // padding-left: 100px!important;
-  // margin-left: 20px!important;
-  // float: right;
- }
- .btn-success-2 {
-     color: #fff;//字體顏色
-     background-color: #2cc795;//背景顏色
-     border-color: #2cc795;//邊框顏色
-     position: absolute;
-     top: 45%;
-     left: 15.5%;
- }
- .btn-success-2:hover {
-     background-color: #5cb85c;//鼠標放置在btn上的背景顏色
-     border-color: #5cb85c;//鼠標放置在btn上的邊框顏色
- }
- .btn-lg-2, .btn-group-lg .btn {
-     padding: 14px 16px;//通過padding來決定btn的大小
-     font-size: 20px;//btn文字大小
-     letter-spacing: 1px;//調整文字間距
-     border-radius: 3px;//btn圓角
-     width: 260px;//這裡用指定寬度把btn拉得更長
- }
+//===========Show =========//
+.logo-1 img {
+   width: 150px; //定制图片宽度
+   height: 150px; //定制图片高度
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+.row-3 {
+background-color: #fff;
+// padding-left: 100px!important;
+// margin-left: 20px!important;
+// float: right;
+}
+.btn-success-2 {
+   color: #fff;//字體顏色
+   background-color: #2cc795;//背景顏色
+   border-color: #2cc795;//邊框顏色
+   position: absolute;
+   top: 45%;
+   left: 15.5%;
+}
+.btn-success-2:hover {
+   background-color: #5cb85c;//鼠標放置在btn上的背景顏色
+   border-color: #5cb85c;//鼠標放置在btn上的邊框顏色
+}
+.btn-lg-2, .btn-group-lg .btn {
+   padding: 14px 16px;//通過padding來決定btn的大小
+   font-size: 20px;//btn文字大小
+   letter-spacing: 1px;//調整文字間距
+   border-radius: 3px;//btn圓角
+   width: 260px;//這裡用指定寬度把btn拉得更長
+}
+.label-show-1 {
+  font-size: 15px!important;
+  padding: 15px!important;
+  color: #3a3a3a!important;
+  background-color: #f8f8f8!important;
+}
+.font-show-1 {
+ color:#5bc0de;
+ margin-top: 60px;
+ margin-bottom: -9px;
+}
 
  //===========Admin index =========//
 .btn-admin-job-1 {
   background-color: #1e3f52!important;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 .btn-admin-job-2 {
   background-color: #1e3f52!important;
   margin-top: -20px;
 }
-
- .btn-success-3 {
-     color: #fff;//字體顏色
-     background-color: #1e3f52;//背景顏色
-     border-color: #1e3f52;//邊框顏色
-     margin-top: 20px;
-    //  position: absolute;
-    //  top: 45%;
-    //  left: 15.5%;
- }
- // .btn-success-3:hover {
- //     color: #fff;//字體顏色
- //     background-color: #1e3f52;//鼠標放置在btn上的背景顏色
- //     border-color: #1e3f52;//鼠標放置在btn上的邊框顏色
- // }
- .btn-lg-3, .btn-group-lg .btn {
-     padding: 15px 0px!important;//通過padding來決定btn的大小
-     font-size: 18px!important;//btn文字大小
-    //  letter-spacing: 1px;//調整文字間距
-     border-radius: 5px;//btn圓角
-     width: 180px;//這裡用指定寬度把btn拉得更長
- }
 .table-index-1{
   padding-top: 30px;
 }
-.tr-index-1 {
-  padding-top: 20px;
+.paginate-job-2 {
+ margin: 40px 0px 30px 0px;
 }
-
-//===========Admin index 分页=========//
- .paginate-job-2 {
-   margin: 40px 0px 40px 0px;
- }
