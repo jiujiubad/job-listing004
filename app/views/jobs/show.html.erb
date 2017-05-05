@@ -9,7 +9,7 @@
               <h2 style="color:#5bc0de; float:left;"><%= @job.city %> >&nbsp;</h2>
               <h2 style="color:#3a3a3a;"><%= @job.title %></h2>
 
-              <p style="margin-top:40px; font-size:17px; margin-bottom:45px;">
+              <p class="p-show-1">
                 薪资：<%= @job.wage_lower_bound*0.001 %>k - <%= @job.wage_upper_bound*0.001 %>k &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 公司：<%= @job.company_name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 发布：<%= @job.created_at %><br/>
@@ -18,15 +18,15 @@
                 <%= @job.company_wearfare %>
               </span>
 
-              <h4 class="font-show-1">岗位职责：</h4>
+              <h4 class="h-show-1">岗位职责：</h4>
               <hr/>
-              <p><%= @job.description %></p>
-              <h4 class="font-show-1">任职要求：</h4>
+              <p class="p-show-2"><%= @job.description %></p>
+              <h4 class="h-show-1">任职要求：</h4>
               <hr/>
-              <p><%= @job.title_request %></p>
-              <h4 class="font-show-1">公司介绍：</h4>
+              <p class="p-show-2"><%= @job.title_request %></p>
+              <h4 class="h-show-1">公司介绍：</h4>
               <hr/>
-              <p><%= @job.company_info %></p>
+              <p class="p-show-2"><%= @job.company_info %></p>
               <hr style="width:0px;"/>
               <%= link_to ('投递简历'), new_job_resume_path(@job), class: 'btn btn-lg btn-success' %>
               <div class="text-left">

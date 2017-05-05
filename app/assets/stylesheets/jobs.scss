@@ -76,28 +76,15 @@
 }
 .row-3 {
 background-color: #fff;
-// padding-left: 100px!important;
-// margin-left: 20px!important;
-// float: right;
 }
-.btn-success-2 {
-   color: #fff;//字體顏色
-   background-color: #2cc795;//背景顏色
-   border-color: #2cc795;//邊框顏色
-   position: absolute;
-   top: 45%;
-   left: 15.5%;
+.p-show-1 {
+  margin-top:40px;
+  font-size:17px;
+  margin-bottom:45px;
+  margin-left: 8px;
 }
-.btn-success-2:hover {
-   background-color: #5cb85c;//鼠標放置在btn上的背景顏色
-   border-color: #5cb85c;//鼠標放置在btn上的邊框顏色
-}
-.btn-lg-2, .btn-group-lg .btn {
-   padding: 14px 16px;//通過padding來決定btn的大小
-   font-size: 20px;//btn文字大小
-   letter-spacing: 1px;//調整文字間距
-   border-radius: 3px;//btn圓角
-   width: 260px;//這裡用指定寬度把btn拉得更長
+.p-show-2 {
+  margin: 30px 8px;
 }
 .label-show-1 {
   font-size: 15px!important;
@@ -105,10 +92,9 @@ background-color: #fff;
   color: #3a3a3a!important;
   background-color: #f8f8f8!important;
 }
-.font-show-1 {
+.h-show-1 {
  color:#5bc0de;
- margin-top: 60px;
- margin-bottom: -9px;
+ margin: 50px 0px -9px 8px;
 }
 
  //===========Admin index =========//
