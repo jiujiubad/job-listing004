@@ -114,49 +114,67 @@ background-color: #fff;
 }
 
 //=========== New job =========//
-.job-form-content{
-  h2{
-    text-align: center;
-    color: #3D537F;
-    letter-spacing: 1px;
+.input-style-1{
+  .input-style-2 {
+    height: 50px;
   }
-  .job-content-info{
-    height: 225px;
+  .input-style-3 {
+    height: 200px;
   }
-  .category{
-    width: 75%;
+  .input-title {
+    margin-top: 20px;
   }
-  .location{
-    width: 75%;
+  .input-wage-lower {
+    width: 150px;
   }
-  .wage{
-    width: 50px;
-    border-radius: 5px;
-  }
-  .wage-form{
-    font-weight: 600;
-    font-size: 16px;
-    color: #666;
-  }
-  .hidden-box{
-    font-size: 16px;
-  }
-  .form-actions{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    .button{
-      color: #fff;
-      background-color: #4A6BB5;
-      border-color: #4A6BB5;
-      font-size: 16px;
-      letter-spacing: 1px;
-      width: 100%;
-    }
-    .button:hover{
-        background-color: #4A99B5;
-        border-color: #4A99B5;
-        color: #fff;
-    }
+  .input-wage-upper {
+    width: 150px;
   }
 }
+
+// .job-form-content{
+//   h2{
+//     text-align: center;
+//     color: #3D537F;
+//     letter-spacing: 1px;
+//   }
+//   .job-content-info{
+//     height: 225px;
+//   }
+//   .category{
+//     width: 75%;
+//   }
+//   .location{
+//     width: 75%;
+//   }
+//   .wage{
+//     width: 50px;
+//     border-radius: 5px;
+//   }
+//   .wage-form{
+//     font-weight: 600;
+//     font-size: 16px;
+//     color: #666;
+//   }
+//   .hidden-box{
+//     font-size: 16px;
+//   }
+//   .form-actions{
+//     text-align: center;
+//     margin-top: 50px;
+//     margin-bottom: 25px;
+//     .button{
+//       color: #fff;
+//       background-color: #4A6BB5;
+//       border-color: #4A6BB5;
+//       font-size: 16px;
+//       letter-spacing: 1px;
+//       width: 100%;
+//     }
+//     .button:hover{
+//         background-color: #4A99B5;
+//         border-color: #4A99B5;
+//         color: #fff;
+//     }
+//   }
+// }
