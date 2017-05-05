@@ -1,20 +1,47 @@
-<hr width=0>
-<div class="col-md-6 col-centered">
-  <div class="panel panel-default">
-    <div class="panel-heading">Add a job</div>
-    <div class="panel-body">
-        <%= simple_form_for [:admin, @job] do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :wage_lower_bound, :label => "薪资下限" %>
-        <%= f.input :wage_upper_bound, :label => "薪资上限" %>
-        <%= f.input :contact_email %>
-        <%= f.input :company %>
-        <%= f.input :city %>
-        <%= f.input :location, :label => "Address" %>
-        <%= f.input :is_hidden %>
-        <%= f.submit "Submit" %>
-      <% end %>
+<div class="row-2">
+  <div class="col-md-9 col-centered">
+    <div class="panel panel-default panel-1">
+      <div class="panel-body"  style="padding-top:30px; padding-bottom:30px;">
+
+        <div class="col-md-2">
+          <%= link_to ('职位管理'), admin_jobs_path, class: 'btn btn-lg btn-primary btn-admin-job-1' %>
+          <%= link_to ('添加职位'), new_admin_job_path, class: 'btn btn-lg btn-primary btn-admin-job-2' %>
+        </div>
+
+<!-- 工作 描述 -->
+        <div class="col-md-8">
+          <div class="col-md-12 row-3">
+            <h3>
+              添加职位
+            </h3>
+          </div>
+
+          <div class="col-md-12 row-3  job-form-content">
+            <%= simple_form_for [:admin, @job] do |f| %>
+              <%= f.input :title, :label => "职位名称" %>
+              <%= f.input :description, :label => "岗位职责" %>
+              <%= f.input :wage_lower_bound, :label => "薪资下限" %>
+              <%= f.input :wage_upper_bound, :label => "薪资上限" %>
+              <%= f.input :contact_email, :label => "邮箱" %>
+              <%= f.input :title_request, :label => "任职要求" %>
+              <%= f.input :category, :label => "职位分类" %>
+              <%= f.input :city, :label => "城市" %>
+              <%= f.input :location, :label => "公司地址" %>
+              <%= f.input :company_name, :label => "公司名称" %>
+              <%= f.input :company_info, :label => "公司简介" %>
+              <%= f.input :company_url, :label => "公司网址" %>
+              <%= f.input :company_email, :label => "公司邮箱" %>
+              <%= f.input :company_wearfare, :label => "公司福利" %>
+              <%= f.input :company_year, :label => "公司创办时间" %>
+              <%= f.input :company_people, :label => "公司人数" %>
+              <%= f.input :company_hr, :label => "公司HR" %>
+              <%= f.input :is_hidden, :label => "是否隐藏职位" %>
+              <%= f.submit "完成" %>
+            <% end %>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
