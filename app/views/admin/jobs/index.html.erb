@@ -1,68 +1,84 @@
-<hr width=0>
-<div class="col-md-10 col-centered">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3>
-        公司管理列表
-        <div class="pull-right">
-          <%= link_to("Add a job", new_admin_job_path, :class => "btn btn-default" ) %>
+<div class="row-2">
+  <div class="col-md-9 col-centered">
+    <div class="panel panel-default panel-1">
+      <div class="panel-body">
+
+        <div class="col-md-2">
+          <%= link_to ('职位管理'), admin_jobs_path, class: 'btn btn-lg btn-primary btn-admin-job-1' %>
+          <%= link_to ('添加职位'), new_admin_job_path, class: 'btn btn-lg btn-primary btn-admin-job-2' %>
         </div>
-      </h3>
-    </div>
-    <div class="panel-body">
-      <table class="table table-boldered">
-          <thead>
-              <tr>
-                  <td>
-                      职缺
-                  </td>
 
-                  <td>
-                    收到履历数量
-                  </td>
-                  <td>
+<!-- 工作 描述 -->
+        <div class="col-md-10">
+          <div class="col-md-12 row-3">
+            <h3>
+              公司职位列表
+            </h3>
+          </div>
+          <div class="col-md-12 row-3 table-index-1">
+            <table class="table table-boldered table-striped" >
+              <thead>
+                  <tr>
+                    <td>
+                      职位
+                    </td>
+                    <td>
+                      收到简历数量
+                    </td>
+                    <td>
                       薪资下限
-                  </td>
-                  <td>
+                    </td>
+                    <td>
                       薪资上限
-                  </td>
-                  <td>
+                    </td>
+                    <td>
                       管理选项
-                  </td>
-                  <td>
-                      刊登时间
-                  </td>
-              </tr>
-          </thead>
+                    </td>
+                    <td>
+                      发布时间
+                    </td>
+                  </tr>
+              </thead>
 
-          <% @jobs.each do |job| %>
-          <tr>
-              <td>
+              <% @jobs.each do |job| %>
+              <tr>
+                <td style="vertical-align:middle; height:60px;">
                   <%= render_job_status(job) %>
                   <%= link_to(job.title, admin_job_path(job)) %>
-              </td>
-              <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
-              <td> <%= job.wage_lower_bound %> </td>
-              <td> <%= job.wage_upper_bound %> </td>
-              <td>
-                  <%= link_to("Edit", edit_admin_job_path(job)) %>
-                  |
-                  <%= link_to("Destroy", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
-                  |
+                </td>
+                <td style="vertical-align:middle; padding-left:45px;">
+                  <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %>
+                </td>
+                <td style="vertical-align:middle;">
+                  <%= job.wage_lower_bound*0.001 %>k
+                </td>
+                <td style="vertical-align:middle;">
+                  <%= job.wage_upper_bound*0.001 %>k
+                </td>
+                <td style="vertical-align:middle;">
+                  <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
+                  <%= link_to("Destroy", admin_job_path(job), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" }) %>
                   <% if job.is_hidden %>
-                  <%= link_to("Publish", publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-default") %>
-              <% else %>
-                  <%= link_to("Hide", hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-default") %>
+                  <%= link_to("Publish", publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-success") %>
+                <% else %>
+                  <%= link_to("Hide", hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-warning") %>
                   <% end %>
-              </td>
-              <td>
+                </td>
+                <td style="vertical-align:middle;">
                   <%= job.created_at %>
-              </td>
-          </tr>
-          <% end %>
-      </table>
-      <div class="text-center">
-        <%= will_paginate @jobs %>
+                </td>
+              </tr>
+              <% end %>
+            </table>
+          </div>
+        </div>
+<!-- 分页 pagination -->
+        <div class="col-md-8 paginate-job-2">
+          <div class="text-right">
+            <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
