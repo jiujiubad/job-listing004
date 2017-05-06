@@ -1,15 +1,37 @@
-<hr width=0>
-<div class="col-md-8 col-centered">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3> 投递简历到 <%= @job.title %> </h3>
-    </div>
-    <div class="panel-body">
-      <%= simple_form_for [@job, @resume] do |f| %>
-        <%= f.input :content, label: "自我介绍" %>
-        <%= f.input :attachment, label: "上传简历"%>
-        <%= f.submit "发送" %>
-      <% end %>
+<div class="row-2">
+  <div class="col-md-9 col-centered">
+    <div class="panel panel-default panel-1">
+      <div class="panel-body"  style="padding-top:30px; padding-bottom:30px;">
+
+        <div class="col-md-2">
+          <%= link_to ('职位管理'), admin_jobs_path, class: 'btn btn-lg btn-admin-job-1', style: 'margin-top:10px;' %>
+          <%= link_to ('添加职位'), new_admin_job_path, class: 'btn btn-lg btn-admin-job-1', style: 'margin-top:-20px;' %>
+        </div>
+
+<!-- 工作 描述 -->
+        <div class="col-md-8">
+          <div class="col-md-12 row-3">
+            <h3>
+              投递 > <%= @job.company_name %> > <%= @job.title %>
+            </h3>
+          </div>
+          <div class="col-md-12 row-3 input-style-1">
+            <%= simple_form_for [@job, @resume] do |f| %>
+              <%= f.input :content, :label => false, placeholder:'自我介绍', input_html: { class: 'input-style-3' } %>
+
+              <%= f.input :attachment, label: "上传简历"%>
+              <%= f.submit "发送" %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="col-md-12 logo-1 text-center row-3">
+            <img src='<%= image_url 'tengxun.png' %>' style="width:80px; height:80px;">
+            <h4 style="margin-bottom:25px;">腾讯</h4>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

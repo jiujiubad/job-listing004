@@ -4,16 +4,15 @@
       <div class="panel-body">
 
         <div class="col-md-12">
-          <h2 class="job-title-0">浏览职位</h2>
+          <h2 class="job-title-0">浏览 职位</h2>
         </div>
 
 
 <!-- 排序 -->
           <div class="col-md-9">
             <a href="/" class="btn btn-primary btn-success btn-job-index-1">返回首页</a>
-
             <div class="btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="btn btn-default dropdown-toggle btn-dropdown-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 职位排序 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
@@ -22,8 +21,7 @@
                 <li><%= link_to("发布时间", jobs_path ) %></li>
               </ul>
             </div>
-
-        </div>
+          </div>
 <!-- 工作 描述 -->
         <div class="col-md-9">
         <% @jobs.each do |job| %>

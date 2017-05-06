@@ -13,15 +13,30 @@
 
 
           <div class="col-md-12 text-center h-search-title">
-            <h2> "<%= @query_string %>" 相关工作 </h2>
+            <h2> "<%= @query_string %>" 搜索结果 </h2>
           </div>
+
+<!-- 排序 -->
+        <div class="col-md-9">
+          <a href="/" class="btn btn-primary btn-success btn-job-index-1">返回首页</a>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle btn-dropdown-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              职位排序 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><%= link_to("薪资上限", jobs_path(:order => "by_upper_bound")) %></li>
+              <li><%= link_to("薪资下限", jobs_path(:order => "by_lower_bound")) %></li>
+              <li><%= link_to("发布时间", jobs_path ) %></li>
+            </ul>
+          </div>
+        </div>
 
 <!-- 工作 描述 -->
         <div class="col-md-9">
         <% @jobs.each do |job| %>
           <div class="job-list">
             <ul>
-              <li  style="padding-bottom:-50px;">
+              <li >
                   <div class="job-primary">
 <!-- ①工作区 -->
                     <div class="col-md-2">
@@ -63,10 +78,12 @@
 <% if @query_string.blank? %>
 <% else %>
   <div class="col-md-3">
-    <div>
-        <div class="col-md-12 suggest-title">
-          <h3 style="font-size:20px; ">您可能会喜欢 <a>换一批</a></h3>
-        </div>
+      <div class="col-md-12 suggest-title">
+        <h3 style="font-size:18px; ">HR 为您推荐</h3><hr/>
+      </div>
+      <div class="col-md-12 suggest-title">
+        <img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffbnlocya3j30kf0iw439.jpg" style="width:230px;">
+      </div>
         <% @suggests.each do |job| %>
             <div class="col-md-12  suggest-content">
                 <div>
@@ -84,7 +101,6 @@
                 </div>
             </div>
         <% end %> <!-- 结束@suggests循环 -->
-    </div>
   </div>
 <!-- 分页 pagination -->
   <div class="col-md-8 paginate-job-1">
