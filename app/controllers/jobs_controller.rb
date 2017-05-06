@@ -57,9 +57,20 @@ class JobsController < ApplicationController
 
   def search
     if @query_string.present?
-      search_result = Job.published.ransack(@search_criteria).result(:distinct => true)
-        @jobs = search_result.paginate(:page => params[:page], :per_page => 8 )
+      search_result = Job.published.ransack(@search_criteria).result(distinct: true)
+      @jobs = search_result.paginate(page: params[:page], per_page: 5)
     end
+    end
+
+  protected
+
+  def validate_search_key
+    @query_string = params[:q].gsub(/\\|\'|\/|\?/, '') if params[:q].present?
+    @search_criteria = search_criteria(@query_string)
+  end
+
+  def search_criteria(query_string)
+    { :title_or_city_or_category_or_location_or_company_name_cont => query_string }
   end
 
   def city
@@ -75,15 +86,6 @@ class JobsController < ApplicationController
     params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden,
     :title_request, :description_simple, :category, :city, :location, :company_name, :company_info, :company_url,
     :company_email, :company_logo, :company_picture, :company_wearfare, :company_year, :company_people, :company_hr)
-  end
-
-  def validate_search_key
-    @query_string = params[:q].gsub(/\\|\'|\/|\?/, "") if params[:q].present?
-    @search_criteria = search_criteria(@query_string)
-  end
-
-  def search_criteria(query_string)
-    { :title_or_city_or_category_or_location_or_company_cont => query_string }
   end
 
   def validate_city_key
