@@ -45,7 +45,15 @@
  width: 65px;
  height: 65px;
 }
-//////////////
+.btn-job-index-1 {
+  background: #2cc795!important;
+  border: none;
+}
+
+.btn-job-index-1:hover {
+  background: #45d6a6!important;
+}
+////////////
 .job-primary .info-primary {//工资设置
  float: left;
  font-size: 15px;
@@ -59,15 +67,15 @@
 .suggest-content{//正文部分
  background-color: #fff;
  border-top: 4px solid #f8f8f8;
- padding: 10px;
+ padding: 15px;
 }
 //===========index 分页=========//
 .paginate-job-1 {
- margin: 40px 0px 70px 0px;
+ margin: 40px 0px 40px 160px;
 }
 
 
-//===========Show =========//
+//=========Job Show 工作详情页=========//
 .logo-1 img {
    width: 150px; //定制图片宽度
    height: 150px; //定制图片高度
@@ -97,7 +105,7 @@ background-color: #fff;
  margin: 50px 0px -9px 8px;
 }
 
-//===========Admin index =========//
+//===========Admin index 后台主页 =========//
 .btn-admin-job-1 {
   -webkit-border-radius: 6;
   -moz-border-radius: 6;
