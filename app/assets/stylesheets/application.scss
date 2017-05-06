@@ -307,15 +307,27 @@ p.font-4 {
   margin-top: 35px;
   text-align: left;
 }
-.button-3 {//按钮的位置、大小
-  margin-top: 10px;
-  width: 160px;
-  height: 50px;
-  background-color: #2cc795;
-  border: none;
+
+.btn-success-2 {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 17px;
+  background: #2cc795;
+  padding: 12px 48px 12px 48px;
+  text-decoration: none;
+  position: absolute;
+  top: 82.8%;
+  left: 44.7%;
+  margin-top: 40px;
+
 }
-.button-3:hover {
-  background-color: #45d6a6;
+.btn-success-2:hover {
+  background: #45d6a6;
+  text-decoration: none;
+  color: #ffffff!important;
 }
 p.font-0 {
   font-family: "Microsoft YaHei";
@@ -476,7 +488,7 @@ p.font-0 {
 /* Footer left */
 .footer-distributed .footer-left{
 	width: 40%;
-  margin-left: 70px;
+  margin-left: 110px;
   margin-right: -60px;
 }
 
