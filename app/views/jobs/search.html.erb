@@ -1,36 +1,95 @@
-<div>
-  <br>
+
 <% if @query_string.blank? %>
-    <div class="search-info-title">
-      Sorry, The search content cannot be blank, please type some product into to search.
-    </div>
+    <h2 class="text-center" style="margin-top:120px;">搜索信息为空，请输入相关信息。</h2>
+<% elsif @jobs.blank? %>
+    <h2 class="text-center" style="margin-top:120px;">搜索信息为空，请输入相关信息。</h2>
+<% else %>
 
-  <% elsif @jobs.blank? %>
-    <br>
-    <h2 class="search-info-title">搜索信息不能为空，请输入关键字搜索</h2>
-  <% else %>
-    <h2 class="search-info-title"> 有关"<%= @query_string %>"的工作信息 </h2>
-    <div class="search-result">
 
-      <div class="row jobs-show0"></div>
-      <div class="job-table">
-        <% @jobs.each do |job| %>
-        <div class="row jobs-show">
+<div class="row-2">
+  <div class="col-md-9 col-centered">
+    <div class="panel panel-default panel-1">
+      <div class="panel-body">
 
-          <div class="col-md-12 col-lg-9 col-lg-offset-1">
 
-            <div class="pull-right">
-              发布时间：<%= job.created_at.to_date %>
-            </div>
-            <p ><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
-
+          <div class="col-md-12 text-center h-search-title">
+            <h2> "<%= @query_string %>" 相关工作 </h2>
           </div>
-        </div>
+
+<!-- 工作 描述 -->
+        <div class="col-md-9">
+        <% @jobs.each do |job| %>
+          <div class="job-list">
+            <ul>
+              <li  style="padding-bottom:-50px;">
+                  <div class="job-primary">
+<!-- ①工作区 -->
+                    <div class="col-md-2">
+                      <img class="job-logo" src='<%= image_url 'tengxun.png' %>' >
+                    </div>
+<!-- ②工作区 -->
+                    <div class="col-md-7 info-primary">
+                      <p style="font-size:20px;"><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
+                      <p>公司：<%= job.company_name %></p>
+                      <p>领域：<%= job.category %></p>
+                      <p><%= job.company_wearfare %></p>
+                    </div>
+<!-- ③工作区 -->
+                    <div class="col-md-3">
+                          <div class="company-logo">
+                            <%= job.wage_lower_bound*0.001 %>k - <%= job.wage_upper_bound*0.001 %>k
+                          </div>
+                          <p>地点：<%= job.city %></p>
+                          <p> <%= job.created_at.to_date %></p>
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-9">
+                    <hr/>
+                  </div> -->
+                <!-- </a> -->
+              </li>
+            </ul>
+              <% end %>
+            </div>
         <% end %>
+        </div>
+
       </div>
     </div>
+  </div>
+</div>
+
+<!-- 推荐 职位col-xs-offset-1 -->
+<% if @query_string.blank? %>
+<% else %>
+  <div class="col-md-3">
+    <div>
+        <div class="col-md-12 suggest-title">
+          <h3 style="font-size:20px; ">您可能会喜欢 <a>换一批</a></h3>
+        </div>
+        <% @suggests.each do |job| %>
+            <div class="col-md-12  suggest-content">
+                <div>
+                  <p>
+                    <%= link_to job_path(job), target: "_blank" do %>
+                        <%= job.title %>
+                    <% end %>
+                  </p4>
+                </div>
+                <div>
+                  <p>公司：<%= job.company_name %></p>
+                </div>
+                <div>
+                  <p><%= job.company_wearfare %></p>
+                </div>
+            </div>
+        <% end %> <!-- 结束@suggests循环 -->
+    </div>
+  </div>
+<!-- 分页 pagination -->
+  <div class="col-md-8 paginate-job-1">
     <div class="text-center">
       <%= will_paginate(@jobs, renderer: BootstrapPagination::Rails) %>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
