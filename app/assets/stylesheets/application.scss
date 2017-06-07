@@ -19,8 +19,37 @@
 @import "bootstrap";
 @import "font-awesome";
 
-
-
+::-webkit-input-placeholder { /* WebKit browsers */
+　　color:#999;
+　　}
+　　:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+　　color:#999;
+　　}
+　　::-moz-placeholder { /* Mozilla Firefox 19+ */
+　　color:#999;
+　　}
+　　:-ms-input-placeholder { /* Internet Explorer 10+ */
+　　color:#999;
+　　}
+input[placeholder], [placeholder], *[placeholder] {
+color:red !important;
+}
+#input-111 {
+  width: 200px;
+  background-color: red;
+  input::-webkit-input-placeholder { /* WebKit browsers */
+　　color:#999;
+　　}
+　　:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+　　color:#999;
+　　}
+　　::-moz-placeholder { /* Mozilla Firefox 19+ */
+　　color:#999;
+　　}
+　　:-ms-input-placeholder { /* Internet Explorer 10+ */
+　　color:#999;
+　　}
+}
 //================常用素材====================
 /*-----------所有版块上下、左右撑开位置*/
 .container-fluid1 {
