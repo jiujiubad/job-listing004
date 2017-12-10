@@ -19,36 +19,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
-::-webkit-input-placeholder { /* WebKit browsers */
-　　color:#999;
-　　}
-　　:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-　　color:#999;
-　　}
-　　::-moz-placeholder { /* Mozilla Firefox 19+ */
-　　color:#999;
-　　}
-　　:-ms-input-placeholder { /* Internet Explorer 10+ */
-　　color:#999;
-　　}
 input[placeholder], [placeholder], *[placeholder] {
-color:red !important;
-}
-#input-111 {
-  width: 200px;
-  background-color: red;
-  input::-webkit-input-placeholder { /* WebKit browsers */
-　　color:#999;
-　　}
-　　:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-　　color:#999;
-　　}
-　　::-moz-placeholder { /* Mozilla Firefox 19+ */
-　　color:#999;
-　　}
-　　:-ms-input-placeholder { /* Internet Explorer 10+ */
-　　color:#999;
-　　}
+
 }
 //================常用素材====================
 /*-----------所有版块上下、左右撑开位置*/
@@ -347,11 +319,6 @@ p.font-4 {
   background: #2cc795;
   padding: 12px 48px 12px 48px;
   text-decoration: none;
-  position: absolute;
-  top: 82.8%;
-  left: 44.7%;
-  margin-top: 40px;
-
 }
 .btn-success-2:hover {
   background: #45d6a6;
@@ -363,6 +330,7 @@ p.font-0 {
   // font-weight: 1000;
   font-size: 29px;
   color: #1e3f52;
+  text-align: center;
 }
 /*关于字体的定义见 Common*/
 
@@ -507,19 +475,7 @@ p.font-0 {
   position: absolute;//footer置底（配合body、html的css）
   bottom: 0;//footer置底
 }
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-	display: inline-block;
-	vertical-align: top;
-}
 
-/* Footer left */
-.footer-distributed .footer-left{
-	width: 40%;
-  margin-left: 110px;
-  margin-right: -60px;
-}
 
 /* The company logo */
 .footer-distributed h3{
@@ -582,16 +538,21 @@ p.font-0 {
 	font-size:14px;
 	line-height:2;
 }
-.footer-distributed .footer-center p a{
-	color:  #ffffff;
-	text-decoration: none;;
+.pp-1 {
+  i {
+    color:  #ffffff;
+  	text-decoration: none;;
+  }
+  p {
+    color:  #ffffff;
+  	text-decoration: none;;
+    a {
+      color:  #ffffff;
+    	text-decoration: none;;
+    }
+  }
 }
-
 /* Footer Right */
-.footer-distributed .footer-right{
-	width: 20%;
-  margin-top: 20px;
-}
 .footer-distributed .footer-company-about{
 	line-height: 20px;
 	color:  #ffffff;
